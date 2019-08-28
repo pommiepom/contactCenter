@@ -1,0 +1,77 @@
+<html>
+<meta name="viewport" content="initial-scale=1.0">
+
+<head>
+	<script src="libs/jquery-3.4.1.min.js"></script>
+	<script src="js/smartAgent.js"></script>
+	<link href="libs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="libs/js/bootstrap.min.js" rel="stylesheet">
+	<link href="css/smartAgent.css" rel="stylesheet">
+	<link href="./libs/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="divScreen">
+		<div class="statusBar">
+			<div class="row" style="color: white; height: 75px; margin: 0">
+				<div class="col-2" style="padding-right: 0">
+					<img class="rounded-circle centerV" id="profile" src="images/profilePicture.png" alt="profile pic"
+						style="max-width:100%;">
+				</div>
+				<div class="col-5" style="padding-left: 25; padding-right: 0">
+					<div class="container-fluid centerV" style="padding: 0">
+						<p id="name" style="margin: 0">Name Surname</p>
+						<select class="minimal" id="status" name="status" style="font-size: 14px">
+							<option value="ready">Ready</option>
+							<option value="notready">Not Ready</option>
+						</select>
+						<p id="callTime" style="margin: 0; font-size: 12px">0:00:00</p>
+					</div>
+				</div>
+				<div class="col-3" style="padding-right: 0">
+					<p class="centerV float-right" id="extNum" style="font-size: 30px; font-weight: bold">7500</p>
+				</div>
+				<div class="col-2">
+					<a href="">
+						<img class="centerV" src="icon/settings-work-tool.png" alt="setting" style="width: 55%">
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="functionBar">
+			<div class="row" style="height: 55px; margin: 0; border-bottom: 2px solid #f4f4f3">
+				<div class="col-7" style="padding-left: 15">
+					<div class="searchPhone centerV">
+						<input class="form-control phoneSearch" id="phoneNumber" type="text"
+							placeholder="Enter a telephone number">
+						<button id="clearInput" onclick="clear()" class="centerV" aria-hidden="true">
+							<img src="icon/close.png" style="height: 60%; opacity: 0.5;">
+						</button>
+					</div>
+
+				</div>
+				<div class="col-5" style="padding-left: 0; padding-right: 5">
+					<div class="container centerV" style="padding: 0">
+						<a href="">
+							<img class="groupButton" src="icon/Ui Buttons (9).png" alt="setting">
+						</a>
+						<a href="">
+							<img class="groupButton" src="icon/Ui Buttons (9).png" alt="setting">
+						</a>
+						<a href="">
+							<img class="groupButton" src="icon/Ui Buttons (9).png" alt="setting">
+						</a>
+						<a href="">
+							<img class="groupButton" src="icon/Ui Buttons (9).png" alt="setting">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
