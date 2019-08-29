@@ -1,4 +1,9 @@
-#divScreen {
+body {
+    margin: 0px !important;
+    background-color: black
+}
+
+.divScreen {
     width: 300px;
     height: 500px;
     margin: 0 !important;
@@ -6,14 +11,22 @@
     background-color: #F8F8F8;
 }
 
-body {
-    margin: 0px !important;
-    background-color: black
-}
-
 .centerH {
     margin-left: auto;
     margin-right: auto;
+}
+
+.centerV {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+.form-control {
+    background-color: #e8f0fe
 }
 
 #username {
@@ -27,8 +40,7 @@ body {
     border-top-right-radius: 0;
 }
 
-.centerV {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+/* :focus {
+	box-shadow: none !important;
+	outline: none !important;
+} */
