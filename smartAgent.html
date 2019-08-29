@@ -16,7 +16,7 @@
 	<div class="divScreen">
 		<div class="row statusBar">
 			<div class="col-2" style="padding-right: 0">
-				<img class="rounded-circle centerV" id="profile" src="images/profilePicture.png" alt="profile pic"
+				<img class="rounded-circle centerV" id="profile" src="images/profilePicture.png"
 					style="max-width:100%;">
 			</div>
 			<div class="col-5" style="padding-left: 25; padding-right: 0">
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<div class="col-5" style="padding-left: 0; padding-right: 5">
-				<div class="container groupButton centerV" >
+				<div class="container groupButton centerV">
 					<a href="">
 						<img src="icon/Ui Buttons (9).png">
 					</a>
@@ -108,7 +108,7 @@
 			<div class="col-10" style="padding: 0">
 				<div class="container-fluid">
 					<div class="row">
-					<table class="table">
+						<table class="table">
 							<thead class="thead-light">
 								<tr>
 									<th>Login Time</th>
@@ -119,34 +119,88 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>00:00</td>
-									<td>0:00:00</td>
-									<td>0:00:00</td>
-									<td></td>
+									<td id="loginTime">00:00</td>
+									<td id="logonTime">0:00:00</td>
+									<td id="talkTime">0:00:00</td>
+									<td id="order"></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					
+
 					<div class="row callStat">
 						<div class="container-fluid">
 							<div class="row">
-								<div class="col-6" style="background-color: #00bceb">
-
+								<div class="col-6 borderCol" style="background-color: #00bceb">
+									<div class="container-fluid centerV">
+										<div class="row">
+											<div class="col-3">
+												<img class="centerH" src="icon/telemarketer-List.png"
+													style="height: 65%">
+											</div>
+											<div class="col-3">
+												<p class="centerV" id="waitingcallNum"
+													style="font-size: 16px; font-weight: bold">00</p>
+											</div>
+											<div class="col-6">
+												<p class="centerV" id="waitingcallTime">0:00:00</p>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="col-6" style="background-color: #e44141">
-									
+								<div class="col-6 borderCol" style="background-color: #e44141">
+									<div class="container-fluid centerV">
+										<div class="row">
+											<div class="col-3">
+												<img class="centerH" src="icon/hot-line.png" style="height: 65%">
+											</div>
+											<div class="col-3">
+												<p class="centerV" id="dropcallNum"
+													style="font-size: 16px; font-weight: bold">00</p>
+											</div>
+											<div class="col-6">
+												<p class="centerV" id="dropcallTime">0:00:00</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-4" style="background-color: #49d761">
-									
+								<div class="col-4 borderCol" style="background-color: #49d761">
+									<div class="container-fluid centerV">
+										<div class="row">
+											<div class="col-6">
+												<img class="centerH" src="icon/phone-call in.png" style="height: 65%">
+											</div>
+											<div class="col-6">
+												<p class="centerV" id="xxxxxxxx">000</p>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="col-4" style="background-color: #f0ce0e">
-									
+								<div class="col-4 borderCol" style="background-color: #f0ce0e">
+									<div class="container-fluid centerV">
+										<div class="row">
+											<div class="col-6">
+												<img class="centerH" src="icon/phone-call out.png" style="height: 65%">
+											</div>
+											<div class="col-6">
+												<p class="centerV" id="xxxxxxxxxx">000</p>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="col-4" style="background-color: #e44141">
-									
+								<div class="col-4 borderCol" style="background-color: #e44141">
+									<div class="container-fluid centerV">
+										<div class="row">
+											<div class="col-6">
+												<img class="centerH" src="icon/phone-call abandon.png" style="height: 65%">
+											</div>
+											<div class="col-6">
+												<p class="centerV" id="xxxxxxxxxx">000</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -154,6 +208,7 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 </body>
 

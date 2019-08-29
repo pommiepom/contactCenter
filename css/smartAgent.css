@@ -64,6 +64,27 @@ select {
 	 -webkit-appearance: none;
 }
 
+
+  select:after{
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #f00;
+	position: absolute;
+	top: 40%;
+	right: 5px;
+	content: "";
+	z-index: 98;
+   }
+   select{
+	width: 220px;
+	border: 0;
+	position: relative;
+	z-index: 99;
+	background: none;
+  }
+
 #extNum {
 	font-size: 30px;
 	font-weight: bold;
@@ -177,7 +198,23 @@ th {
 	bottom: 0px
 }
 
-.callStat .col-6, .callStat .col-4 {
+.borderCol {
 	border: solid 1px #ffffff;
-	height: 40px
+	height: 40px;
+	padding: 0
+}
+
+.callStat .col-3 {
+	padding: auto
+}
+
+.callStat {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.callStat  p {
+	margin-bottom: 0;
+	margin: auto;
+	padding: auto
 }
