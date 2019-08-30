@@ -41,18 +41,49 @@ a:hover {
 	margin: 0;
 }
 
-select {
+.custom-select {
 	background-color: transparent;
 	border: none;
 	padding: 0;
 	color: #FFFFFF;
+	width: 60%;
 	height: 20px;
-	/* -webkit-appearance: none; */
 }
 
 option {
 	color: black;
 }
+
+select {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	color: #FFFFFF;
+	width: 60%;
+	height: 20px;
+	 -webkit-appearance: none;
+}
+
+
+  select:after{
+	width: 0; 
+	height: 0; 
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #f00;
+	position: absolute;
+	top: 40%;
+	right: 5px;
+	content: "";
+	z-index: 98;
+   }
+   select{
+	width: 220px;
+	border: 0;
+	position: relative;
+	z-index: 99;
+	background: none;
+  }
 
 #extNum {
 	font-size: 30px;
