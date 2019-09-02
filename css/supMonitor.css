@@ -31,3 +31,81 @@ body {
 .statistic p {
 	margin-bottom: 0
 }
+
+.silentBar {
+	background-color: #ffffff;
+	height: 45px;
+	margin: 0 10px 10px 0;
+	border: 1px solid #e6e7e9
+}
+.silentBar  button {
+	height: 80%;
+	background-color: transparent;
+	border: none;
+	padding: 0
+}
+
+.silentBar  button  img {
+	height: 100%
+}
+
+.col-5th {
+	float: left;
+	width: 20%;
+	color: #000;
+	padding: 0 10px 10px 0
+}
+	
+.card {
+	border: 0
+}
+
+.cardHead {
+	height: 35px;
+	background-color: #4ad762;
+	color: #fff;
+	border:none;
+	padding-left: 10px;
+	padding-right: 10px
+}
+
+.cardHead p {
+	margin: auto;
+	font-size: 10px;
+	font-weight: bold;
+	display: inline;
+}
+
+.card {
+	border-radius: 0;
+}
+
+.card-body {
+	padding: 10px;
+	color: #6a6769;
+}
+
+.card-body > div > div > div > div> div > p, .card-body > div > div> div > p {
+	font-size: 10px;
+	margin-bottom: 0
+}
+
+.callStat {
+	padding-left: 10px;
+	padding-right: 10px
+}
+
+.callStat > .col, .callStat > .col-4 {
+	margin-right: 3px;
+	padding: 5px;
+	border: 1px solid #d4dff5;
+	font-size: 10px;
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	text-align: center
+}

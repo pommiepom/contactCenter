@@ -15,7 +15,7 @@
 <body>
 	<div class="divScreen">
 		<div class="container-fluid">
-			<div class="row" style="color: #ffffff">
+			<div class="row" style="color: #ffffff; margin-bottom: 10px">
 				<div class="col-3" style="padding: 0 10px">
 					<div class="container-fluid">
 						<div class="row" style="height: 145px">
@@ -29,10 +29,9 @@
 				</div>
 				<div class="col-9" style="padding: 0">
 					<div class="container-fluid">
-						<div class="row"
-							style="background-color: #1180ae; font-weight: bold; height: 50px; margin-bottom: 10px">
+						<div class="row" style="background-color: #1180ae; height: 50px; margin-bottom: 10px">
 							<div class="col">
-								<p class="centerV" style="margin-bottom: 0; font-size: 20px">Team</p>
+								<p class="centerV" style="margin-bottom: 0; font-size: 20px; font-weight: bold">Team</p>
 							</div>
 						</div>
 						<div class="row statistic">
@@ -43,7 +42,8 @@
 											<div class="container-fluid">
 												<div class="row">
 													<div class="col">
-														<p class="centerV" style="font-weight: bold; font-size: 36px">0</p>
+														<p class="centerV" style="font-weight: bold; font-size: 36px">0
+														</p>
 													</div>
 													<div class="col">
 														<p class="centerV" style="font-size: 18px">0:00:00</p>
@@ -51,7 +51,7 @@
 												</div>
 												<div class="row">
 													<div class="col">
-														<p class="centerV" style="font-size: 18px">Waiting Call</p>
+														<p class="centerV" style="font-size: 16px">Waiting Call</p>
 													</div>
 												</div>
 											</div>
@@ -60,7 +60,8 @@
 											<div class="container-fluid">
 												<div class="row">
 													<div class="col">
-														<p class="centerV" style="font-weight: bold; font-size: 36px">0</p>
+														<p class="centerV" style="font-weight: bold; font-size: 36px">0
+														</p>
 													</div>
 													<div class="col">
 														<p class="centerV" style="font-size: 18px">0:00:00</p>
@@ -68,7 +69,7 @@
 												</div>
 												<div class="row">
 													<div class="col">
-														<p class="centerV" style="font-size: 18px">Call Back</p>
+														<p class="centerV" style="font-size: 16px">Call Back</p>
 													</div>
 												</div>
 											</div>
@@ -85,7 +86,7 @@
 									</div>
 									<div class="row">
 										<div class="col">
-											<p class="centerV" style="font-size: 18px">All Call &#40In&#41</p>
+											<p class="centerV" style="font-size: 16px">All Call &#40In&#41</p>
 										</div>
 									</div>
 								</div>
@@ -99,7 +100,7 @@
 									</div>
 									<div class="row">
 										<div class="col">
-											<p class="centerV" style="font-size: 18px">Answer Call</p>
+											<p class="centerV" style="font-size: 16px">Answer Call</p>
 										</div>
 									</div>
 								</div>
@@ -113,7 +114,7 @@
 									</div>
 									<div class="row">
 										<div class="col">
-											<p class="centerV" style="font-size: 18px">Drop Call</p>
+											<p class="centerV" style="font-size: 16px">Drop Call</p>
 										</div>
 									</div>
 								</div>
@@ -127,7 +128,7 @@
 									</div>
 									<div class="row">
 										<div class="col">
-											<p class="centerV" style="font-size: 18px">% Drop Call</p>
+											<p class="centerV" style="font-size: 16px">% Drop Call</p>
 										</div>
 									</div>
 								</div>
@@ -136,8 +137,91 @@
 					</div>
 				</div>
 			</div>
-		</div>
+			<div class="row">
+				<div class="col-3" style="padding: 0 10px; height: 500px">
+					<div class="container-fluid">
 
+					</div>
+				</div>
+				<div class="col-9" style="padding: 0">
+					<div class="row silentBar">
+						<div class="col">
+							<div class="centerV float-right">
+								<p style="font-size: 18px; display: inline; padding-right: 5px">Silent Number: <span
+										id="silentNum">7500</span></p>
+								<button>
+									<img src="icon/Ui Buttons (10).png">
+								</button>
+								<button>
+									<img src="icon/Ui Buttons (10).png">
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="container-fluid">
+							<div class="col-5th">
+								<div class="card ">
+									<div class="cardHead">
+										<div class="row centerV">
+											<div class="col-9">
+												<p id="name" class="centerV float-left">Name Surname</p>
+											</div>
+											<div class="col-3">
+												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500</p>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="row" style="padding-bottom: 10px">
+											<div class="col-4" style="padding-right: 0">
+												<img class="rounded-circle" id="profile" src="images/profilePicture.png"
+													style="max-width:80%; border: 1px solid #d4dff5">
+											</div>
+											<div class="col-8">
+												<div class="row">
+													<div class="col-7" style="padding: 0">
+														<div class="container row" style="margin-right: 0">
+															<p id="status" style="font-weight: bold">Ready</p>
+														</div>
+														<div class="container row">
+															<p id="phoneNum" style="font-weight: bold; color: #000">0987654321</p>
+														</div>
+													</div>
+													<div class="col-5">
+														<img src="icon/phone-call Avialable grey.png" style="max-width:100%;">
+													</div>
+												</div>
+												<div class="row" style="padding-left: 0; margin-right: 0">
+													<p id="cusName" style="color: #000">Customer Nameeeeeeeee</p>
+												</div>
+											</div>
+										</div>
+										<div class="row callStat" style="height: 35px">
+											<div class="col-4" style="margin-left: 3px">
+												<p class="centerV centerH" id="time">00:00:00</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="inc">0</span><br>INC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="oc">0</span><br>OC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="tt">0:00</span><br>TT</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 
