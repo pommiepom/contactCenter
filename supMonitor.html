@@ -123,7 +123,8 @@
 								<div class="container-fluid">
 									<div class="row">
 										<div class="col">
-											<p class="centerV" style="font-weight: bold; font-size: 36px"><span>0</span>%</p>
+											<p class="centerV" style="font-weight: bold; font-size: 36px">
+												<span>0</span>%</p>
 										</div>
 									</div>
 									<div class="row">
@@ -137,17 +138,177 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-3" style="padding: 0 10px; height: 500px">
-					<div class="container-fluid">
 
-					</div>
+
+			<div id="supBody" class="row" style=" height: 75%;">
+				<div class="col-3" style="padding: 0 10px; max-height: 100%;">
+					<table id="waitingCall" class="table table-striped" style="margin-bottom: 0; border-bottom: none">
+						<p class="tableName">Waiting Call</p>
+						<thead  id="h_waitingCall">
+							<tr>
+								<th>No.</th>
+								<th>Phone Number</th>
+								<th>Customer Name</th>
+								<th>Waiting Time</th>
+							</tr>
+						</thead>
+						<tbody id="b_waitingCall"> 
+							<tr id="body_waitingCall_1">
+								<td id="xxxx">1.</td>
+								<td id="xxxx">09876543241</td>
+								<td id="xxxx">Name Surname</td>
+								<td id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_waitingCall_2">
+								<td id="xxxx">2.</td>
+								<td id="xxxx">09876543241</td>
+								<td id="xxxx">Name Surname</td>
+								<td id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_waitingCall_3">
+								<td id="xxxx">3.</td>
+								<td id="xxxx">09876543241</td>
+								<td id="xxxx">Name Surname</td>
+								<td id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_waitingCall_4">
+								<td id="xxxx">4.</td>
+								<td id="xxxx">09876543241</td>
+								<td id="xxxx">Name Surname</td>
+								<td id="xxxx">0:00:00</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table id="agentQueue" class="table table-striped fixed_header">
+						<p class="tableName">Agent Queue</p>
+						<thead>
+							<tr id="h_agentQueue">
+								<th style="width: 33px">No.</th>
+								<th style="width: 141px">Name</th>
+								<th style="width: 62px">Extension</th>
+								<th style="width: 68px">State Time</th>
+							</tr>
+						</thead>
+						<tbody id="b_agentQueue">
+							<tr id="body_agebtQueue_1">
+								<td style="width: 33px" id="xxxx">1.</td>
+								<td style="width: 141px" id="xxxx">Name Surname</td>
+								<td style="width: 62px" id="xxxx">7501</td>
+								<td style="width: 68px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_agebtQueue_2">
+								<td style="width: 33px" id="xxxx">2.</td>
+								<td style="width: 141px" id="xxxx">Name Surname</td>
+								<td style="width: 62px" id="xxxx">7502</td>
+								<td style="width: 68px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_agebtQueue_3">
+								<td style="width: 33px" id="xxxx">3.</td>
+								<td style="width: 141px" id="xxxx">Name Surname</td>
+								<td style="width: 62px" id="xxxx">7503</td>
+								<td style="width: 68px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_agebtQueue_4">
+								<td style="width: 33px" id="xxxx">4.</td>
+								<td style="width: 141px" id="xxxx">Name Surname</td>
+								<td style="width: 62px" id="xxxx">7504</td>
+								<td style="width: 68px" id="xxxx">0:00:00</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table id="callBack" class="table table-striped fixed_header" style="margin-bottom: 0">
+						<p class="tableName">Call Back</p>
+						<thead>
+							<tr id="h_callBack">
+								<th style="width: 33px">No.</th>
+								<th style="width: 91px">Phone Number</th>
+								<th style="width: 135px">Customer Name</th>
+								<th style="width: 46px">Time</th>
+							</tr>
+						</thead>
+						<tbody id="b_callBack">
+							<tr id="body_callBack_1">
+								<td style="width: 33px" id="xxxx">1.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_2">
+								<td style="width: 33px" id="xxxx">2.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_3">
+								<td style="width: 33px" id="xxxx">3.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_4">
+								<td style="width: 33px" id="xxxx">4.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_5">
+								<td style="width: 33px" id="xxxx">5.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_6">
+								<td style="width: 33px" id="xxxx">6.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_6">
+								<td style="width: 33px" id="xxxx">6.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_6">
+								<td style="width: 33px" id="xxxx">6.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_6">
+								<td style="width: 33px" id="xxxx">6.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_6">
+								<td style="width: 33px" id="xxxx">6.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_6">
+								<td style="width: 33px" id="xxxx">6.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+							<tr id="body_callBack_6">
+								<td style="width: 33px" id="xxxx">6.</td>
+								<td style="width: 91px" id="xxxx">0987654321</td>
+								<td style="width: 135px" id="xxxx">Name Surname</td>
+								<td style="width: 46px" id="xxxx">0:00:00</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 				<div class="col-9" style="padding: 0">
 					<div class="row silentBar">
 						<div class="col">
 							<div class="centerV float-right">
-								<p style="font-size: 18px; display: inline; padding-right: 5px">Silent Number: <span
+								<p style="font-size: 16px; display: inline; padding-right: 5px">Silent Number: <span
 										id="silentNum">7500</span></p>
 								<button>
 									<img src="icon/Ui Buttons (10).png">
@@ -169,7 +330,8 @@
 												<p id="name" class="centerV float-left">Name Surname</p>
 											</div>
 											<div class="col-3">
-												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500</p>
+												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500
+												</p>
 											</div>
 										</div>
 									</div>
@@ -186,11 +348,13 @@
 															<p id="status" style="font-weight: bold">Ready</p>
 														</div>
 														<div class="container row">
-															<p id="phoneNum" style="font-weight: bold; color: #000">0987654321</p>
+															<p id="phoneNum" style="font-weight: bold; color: #000">
+																0987654321</p>
 														</div>
 													</div>
 													<div class="col-5">
-														<img src="icon/phone-call Avialable grey.png" style="max-width:100%;">
+														<img src="icon/phone-call Avialable grey.png"
+															style="max-width:100%;">
 													</div>
 												</div>
 												<div class="row" style="padding-left: 0; margin-right: 0">
@@ -215,6 +379,296 @@
 									</div>
 								</div>
 							</div>
+
+
+
+							<div class="col-5th">
+								<div class="card ">
+									<div class="cardHead">
+										<div class="row centerV">
+											<div class="col-9">
+												<p id="name" class="centerV float-left">Name Surname</p>
+											</div>
+											<div class="col-3">
+												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="row" style="padding-bottom: 10px">
+											<div class="col-4" style="padding-right: 0">
+												<img class="rounded-circle" id="profile" src="images/profilePicture.png"
+													style="max-width:80%; border: 1px solid #d4dff5">
+											</div>
+											<div class="col-8">
+												<div class="row">
+													<div class="col-7" style="padding: 0">
+														<div class="container row" style="margin-right: 0">
+															<p id="status" style="font-weight: bold">Ready</p>
+														</div>
+														<div class="container row">
+															<p id="phoneNum" style="font-weight: bold; color: #000">
+																0987654321</p>
+														</div>
+													</div>
+													<div class="col-5">
+														<img src="icon/phone-call Avialable grey.png"
+															style="max-width:100%;">
+													</div>
+												</div>
+												<div class="row" style="padding-left: 0; margin-right: 0">
+													<p id="cusName" style="color: #000">Customer Nameeeeeeeee</p>
+												</div>
+											</div>
+										</div>
+										<div class="row callStat" style="height: 35px">
+											<div class="col-4" style="margin-left: 3px">
+												<p class="centerV centerH" id="time">00:00:00</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="inc">0</span><br>INC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="oc">0</span><br>OC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="tt">0:00</span><br>TT</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-5th">
+								<div class="card ">
+									<div class="cardHead">
+										<div class="row centerV">
+											<div class="col-9">
+												<p id="name" class="centerV float-left">Name Surname</p>
+											</div>
+											<div class="col-3">
+												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="row" style="padding-bottom: 10px">
+											<div class="col-4" style="padding-right: 0">
+												<img class="rounded-circle" id="profile" src="images/profilePicture.png"
+													style="max-width:80%; border: 1px solid #d4dff5">
+											</div>
+											<div class="col-8">
+												<div class="row">
+													<div class="col-7" style="padding: 0">
+														<div class="container row" style="margin-right: 0">
+															<p id="status" style="font-weight: bold">Ready</p>
+														</div>
+														<div class="container row">
+															<p id="phoneNum" style="font-weight: bold; color: #000">
+																0987654321</p>
+														</div>
+													</div>
+													<div class="col-5">
+														<img src="icon/phone-call Avialable grey.png"
+															style="max-width:100%;">
+													</div>
+												</div>
+												<div class="row" style="padding-left: 0; margin-right: 0">
+													<p id="cusName" style="color: #000">Customer Nameeeeeeeee</p>
+												</div>
+											</div>
+										</div>
+										<div class="row callStat" style="height: 35px">
+											<div class="col-4" style="margin-left: 3px">
+												<p class="centerV centerH" id="time">00:00:00</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="inc">0</span><br>INC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="oc">0</span><br>OC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="tt">0:00</span><br>TT</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-5th">
+								<div class="card ">
+									<div class="cardHead">
+										<div class="row centerV">
+											<div class="col-9">
+												<p id="name" class="centerV float-left">Name Surname</p>
+											</div>
+											<div class="col-3">
+												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="row" style="padding-bottom: 10px">
+											<div class="col-4" style="padding-right: 0">
+												<img class="rounded-circle" id="profile" src="images/profilePicture.png"
+													style="max-width:80%; border: 1px solid #d4dff5">
+											</div>
+											<div class="col-8">
+												<div class="row">
+													<div class="col-7" style="padding: 0">
+														<div class="container row" style="margin-right: 0">
+															<p id="status" style="font-weight: bold">Ready</p>
+														</div>
+														<div class="container row">
+															<p id="phoneNum" style="font-weight: bold; color: #000">
+																0987654321</p>
+														</div>
+													</div>
+													<div class="col-5">
+														<img src="icon/phone-call Avialable grey.png"
+															style="max-width:100%;">
+													</div>
+												</div>
+												<div class="row" style="padding-left: 0; margin-right: 0">
+													<p id="cusName" style="color: #000">Customer Nameeeeeeeee</p>
+												</div>
+											</div>
+										</div>
+										<div class="row callStat" style="height: 35px">
+											<div class="col-4" style="margin-left: 3px">
+												<p class="centerV centerH" id="time">00:00:00</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="inc">0</span><br>INC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="oc">0</span><br>OC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="tt">0:00</span><br>TT</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-5th">
+								<div class="card ">
+									<div class="cardHead">
+										<div class="row centerV">
+											<div class="col-9">
+												<p id="name" class="centerV float-left">Name Surname</p>
+											</div>
+											<div class="col-3">
+												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="row" style="padding-bottom: 10px">
+											<div class="col-4" style="padding-right: 0">
+												<img class="rounded-circle" id="profile" src="images/profilePicture.png"
+													style="max-width:80%; border: 1px solid #d4dff5">
+											</div>
+											<div class="col-8">
+												<div class="row">
+													<div class="col-7" style="padding: 0">
+														<div class="container row" style="margin-right: 0">
+															<p id="status" style="font-weight: bold">Ready</p>
+														</div>
+														<div class="container row">
+															<p id="phoneNum" style="font-weight: bold; color: #000">
+																0987654321</p>
+														</div>
+													</div>
+													<div class="col-5">
+														<img src="icon/phone-call Avialable grey.png"
+															style="max-width:100%;">
+													</div>
+												</div>
+												<div class="row" style="padding-left: 0; margin-right: 0">
+													<p id="cusName" style="color: #000">Customer Nameeeeeeeee</p>
+												</div>
+											</div>
+										</div>
+										<div class="row callStat" style="height: 35px">
+											<div class="col-4" style="margin-left: 3px">
+												<p class="centerV centerH" id="time">00:00:00</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="inc">0</span><br>INC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="oc">0</span><br>OC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="tt">0:00</span><br>TT</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-5th">
+								<div class="card ">
+									<div class="cardHead">
+										<div class="row centerV">
+											<div class="col-9">
+												<p id="name" class="centerV float-left">Name Surname</p>
+											</div>
+											<div class="col-3">
+												<p id="extNum" class="centerV float-right" style="font-size: 14px;">7500
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="row" style="padding-bottom: 10px">
+											<div class="col-4" style="padding-right: 0">
+												<img class="rounded-circle" id="profile" src="images/profilePicture.png"
+													style="max-width:80%; border: 1px solid #d4dff5">
+											</div>
+											<div class="col-8">
+												<div class="row">
+													<div class="col-7" style="padding: 0">
+														<div class="container row" style="margin-right: 0">
+															<p id="status" style="font-weight: bold">Ready</p>
+														</div>
+														<div class="container row">
+															<p id="phoneNum" style="font-weight: bold; color: #000">
+																0987654321</p>
+														</div>
+													</div>
+													<div class="col-5">
+														<img src="icon/phone-call Avialable grey.png"
+															style="max-width:100%;">
+													</div>
+												</div>
+												<div class="row" style="padding-left: 0; margin-right: 0">
+													<p id="cusName" style="color: #000">Customer Nameeeeeeeee</p>
+												</div>
+											</div>
+										</div>
+										<div class="row callStat" style="height: 35px">
+											<div class="col-4" style="margin-left: 3px">
+												<p class="centerV centerH" id="time">00:00:00</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="inc">0</span><br>INC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="oc">0</span><br>OC</p>
+											</div>
+											<div class="col">
+												<p class="centerV centerH"><span id="tt">0:00</span><br>TT</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
 
 
 						</div>

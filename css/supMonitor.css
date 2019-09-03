@@ -36,17 +36,18 @@ body {
 	background-color: #ffffff;
 	height: 45px;
 	margin: 0 10px 10px 0;
-	border: 1px solid #e6e7e9
+	border: 1px solid #e6e7e9;
+	color: #6a6769
 }
 .silentBar  button {
-	height: 80%;
+	height: 70%;
 	background-color: transparent;
 	border: none;
 	padding: 0
 }
 
 .silentBar  button  img {
-	height: 100%
+	height: 70%
 }
 
 .col-5th {
@@ -103,9 +104,71 @@ body {
 	height: 100%;
 	width: 100%;
 	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
 	text-align: center
+}
+
+.tableName {
+	height: 28px;
+	background-color: white;
+	font-size: 12px;
+	color: #6a6769;
+	border: 1px solid #e6e7e9;
+	padding: 7px !important;
+	border-bottom: none;
+	margin-bottom: 0
+}
+
+.table {
+	border: 1px solid #e6e7e9;
+	margin-bottom: 10px
+}
+
+th, td {
+	font-size: 10px;
+	color: #6a6769;
+	text-align: center;
+	border: none !important;
+	padding: 7px !important;
+}
+
+thead {
+	background-color: #ffffff !important;
+}
+
+th {
+	padding-bottom: 0 !important
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td {
+	background-color: #ffffff;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td {
+	background-color: #f2f2f2;
+}
+
+
+
+.fixed_header{
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+.fixed_header tbody{
+	display:block;
+	width: 100%;
+	overflow: auto;
+}
+
+#b_agentQueue {
+	max-height: 84px;
+}
+
+.fixed_header thead tr {
+   display: block;
+}
+
+.fixed_header th, .fixed_header td {
+  width: 200px;
 }
