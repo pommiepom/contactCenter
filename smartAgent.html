@@ -21,17 +21,21 @@
 			</div>
 			<div class="col-5" style="padding-left: 25; padding-right: 0">
 				<div class="container-fluid centerV" style="padding: 0">
-					<p id="name" style="margin: 0">Name Surname</p>
-					<select id="status" name="status" style="font-size: 14px">
+					<p class="name" id="name" style="margin: 0">Name Surname</p>
+
+					<select id="state" name="state" style="font-size: 14px">
 						<option value="ready">Ready</option>
-						<option value="notready">Not Ready</option>
+						<option value="notReady">Not Ready</option>
 					</select>
-					<p id="callTime" style="margin: 0; font-size: 12px">0:00:00</p>
+
+					<p class="callTime" id="callTime" style="margin: 0; font-size: 12px">0:00:00</p>
 				</div>
 			</div>
+
 			<div class="col-3" style="padding-right: 0">
-				<p class="centerV float-right" id="extNum">7500</p>
+				<p class="centerV float-right extNum" id="extNum">7500</p>
 			</div>
+
 			<div class="col-2">
 				<a href="">
 					<img class="centerV" src="icon/settings-work-tool.png" alt="setting" style="width: 55%">
@@ -42,7 +46,7 @@
 		<div class="row functionBar">
 			<div class="col-7" style="padding-left: 15">
 				<div class="searchPhone centerV">
-					<input class="form-control phoneSearch" id="phoneNumber" type="text"
+					<input class="form-control phoneSearch" id="phoneSearch" type="text"
 						placeholder="Enter a telephone number">
 					<button class="centerV" id="clearInput" aria-hidden="true" onclick="clear()">
 						<img src="icon/close.png" style="height: 60%; opacity: 0.5;">
@@ -119,10 +123,10 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td id="loginTime">00:00</td>
-									<td id="logonTime">0:00:00</td>
-									<td id="talkTime">0:00:00</td>
-									<td id="order"></td>
+									<td class="loginTime" id="loginTime">00:00</td>
+									<td class="logonTime" id="logonTime">0:00:00</td>
+									<td class="talkTime" id="talkTime">0:00:00</td>
+									<td class="order" id="order"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -138,11 +142,11 @@
 												<img class="centerH" src="icon/telemarketer-List.png" style="height: 65%">
 											</div>
 											<div class="col-3">
-												<p class="centerV" id="waitingcallNum"
+												<p class="centerV waitCall" id="waitCall"
 													style="font-size: 16px; font-weight: bold">00</p>
 											</div>
 											<div class="col-6">
-												<p class="centerV" id="waitingcallTime">0:00:00</p>
+												<p class="centerV waitCall_time" id="waitCall_time">0:00:00</p>
 											</div>
 										</div>
 									</div>
@@ -154,11 +158,11 @@
 												<img class="centerH" src="icon/hot-line.png" style="height: 65%">
 											</div>
 											<div class="col-3">
-												<p class="centerV" id="dropcallNum"
+												<p class="centerV dropCall" id="dropCall"
 													style="font-size: 16px; font-weight: bold">00</p>
 											</div>
 											<div class="col-6">
-												<p class="centerV" id="dropcallTime">0:00:00</p>
+												<p class="centerV dropCall_time" id="dropCall_time">0:00:00</p>
 											</div>
 										</div>
 									</div>
@@ -172,7 +176,7 @@
 												<img class="centerH" src="icon/phone-call in.png" style="height: 65%">
 											</div>
 											<div class="col-6">
-												<p class="centerV" id="xxxxxxxx">000</p>
+												<p class="centerV callIn" id="callIn">000</p>
 											</div>
 										</div>
 									</div>
@@ -184,7 +188,7 @@
 												<img class="centerH" src="icon/phone-call out.png" style="height: 65%">
 											</div>
 											<div class="col-6">
-												<p class="centerV" id="xxxxxxxxxx">000</p>
+												<p class="centerV callOut" id="callOut">000</p>
 											</div>
 										</div>
 									</div>
@@ -196,7 +200,7 @@
 												<img class="centerH" src="icon/phone-call abandon.png" style="height: 65%">
 											</div>
 											<div class="col-6">
-												<p class="centerV" id="xxxxxxxxxx">000</p>
+												<p class="centerV missCall" id="missCall">000</p>
 											</div>
 										</div>
 									</div>

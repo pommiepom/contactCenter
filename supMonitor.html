@@ -29,23 +29,28 @@
 				</div>
 				<div class="col-9" style="padding: 0">
 					<div class="container-fluid">
-						<div class="row" style="background-color: #1180ae; height: 50px; margin-bottom: 10px">
-							<div class="col">
-								<p class="centerV" style="margin-bottom: 0; font-size: 20px; font-weight: bold">Team</p>
+						<div class="row teamBar">
+							<div class="col-1">
+								<p class="centerV" style="margin-bottom: 0">Team</p>
+							</div>
+							<div class="col-11">
+								<select class="centerV" id="team" name="team">
+									<option value="1">Dispatch BKK IN</option>
+									<option value="2">Dispatch BKK IN IN IN IN IN IN</option>
+								</select>
 							</div>
 						</div>
-						
+
 						<div class="row statistic">
 							<div class="col-5">
 								<div class="row">
-									<div class="col status" style="background-color: #00bceb">
+									<div class="col statusBar" style="background-color: #00bceb">
 										<div class="row">
 											<div class="col">
-												<p class="centerV" style="font-weight: bold; font-size: 36px">0
-												</p>
+												<p class="centerV waitCall" id="waitCall" style="font-weight: bold; font-size: 36px">0</p>
 											</div>
 											<div class="col">
-												<p class="centerV" style="font-size: 18px">0:00:00</p>
+												<p class="centerV waitCall_time" id="waitCall_time" style="font-size: 18px">0:00:00</p>
 											</div>
 										</div>
 										<div class="row">
@@ -55,14 +60,13 @@
 										</div>
 									</div>
 
-									<div class="col status" style="background-color: #e44141">
+									<div class="col statusBar" style="background-color: #e44141">
 										<div class="row">
 											<div class="col">
-												<p class="centerV" style="font-weight: bold; font-size: 36px">0
-												</p>
+												<p class="centerV callBack" id="callack" style="font-weight: bold; font-size: 36px">0</p>
 											</div>
 											<div class="col">
-												<p class="centerV" style="font-size: 18px">0:00:00</p>
+												<p class="centerV callBack_time" id="callBack_time" style="font-size: 18px">0:00:00</p>
 											</div>
 										</div>
 										<div class="row">
@@ -74,7 +78,7 @@
 								</div>
 							</div>
 
-							<div class="col status" style="background-color: #5c7148">
+							<div class="col statusBar" style="background-color: #5c7148">
 								<div class="row">
 									<div class="col">
 										<p class="centerV" style="font-weight: bold; font-size: 36px">0</p>
@@ -82,15 +86,15 @@
 								</div>
 								<div class="row">
 									<div class="col">
-										<p class="centerV" style="font-size: 16px">All Call &#40In&#41</p>
+										<p class="centerV allCall" id="allCall" style="font-size: 16px">All Call &#40In&#41</p>
 									</div>
 								</div>
 							</div>
 
-							<div class="col status" style="background-color: #88b14b">
+							<div class="col statusBar" style="background-color: #88b14b">
 								<div class="row">
 									<div class="col">
-										<p class="centerV" style="font-weight: bold; font-size: 36px">0</p>
+										<p class="centerV ansCall" id="ansCall" style="font-weight: bold; font-size: 36px">0</p>
 									</div>
 								</div>
 								<div class="row">
@@ -99,11 +103,11 @@
 									</div>
 								</div>
 							</div>
-							
-							<div class="col status" style="background-color: #d74061">
+
+							<div class="col statusBar" style="background-color: #d74061">
 								<div class="row">
 									<div class="col">
-										<p class="centerV" style="font-weight: bold; font-size: 36px">0</p>
+										<p class="centerV dropCall" id="dropCall" style="font-weight: bold; font-size: 36px">0</p>
 									</div>
 								</div>
 								<div class="row">
@@ -113,10 +117,12 @@
 								</div>
 							</div>
 
-							<div class="col status" style="background-color: #ef562d">
+							<div class="col statusBar" style="background-color: #ef562d">
 								<div class="row">
 									<div class="col">
-										<p class="centerV" style="font-weight: bold; font-size: 36px"><span>0</span>%</p>
+										<p class="centerV perDropCall" style="font-weight: bold; font-size: 36px">
+											<span id="perDropCall">0</span>%
+										</p>
 									</div>
 								</div>
 								<div class="row">
@@ -131,9 +137,9 @@
 			</div>
 
 
-			<div id="supBody" class="row" style=" height: 75%;">
+			<div class="row" id="supBody" style=" height: 75%;">
 				<div class="col-3" style="padding: 0 10px; max-height: 100%;">
-					<table id="waitingCall" class="table table-striped" style="margin-bottom: 0; border-bottom: none">
+					<table class="table table-striped" id="waitingCall" style="margin-bottom: 0; border-bottom: none">
 						<p class="tableName">Waiting Call</p>
 						<thead id="h_waitingCall">
 							<tr>
@@ -146,7 +152,7 @@
 						<tbody id="b_waitingCall"></tbody>
 					</table>
 
-					<table id="agentQueue" class="table table-striped fixed_header">
+					<table class="table table-striped fixed_header" id="agentQueue">
 						<p class="tableName">Agent Queue</p>
 						<thead>
 							<tr id="h_agentQueue">
@@ -159,7 +165,7 @@
 						<tbody id="b_agentQueue"></tbody>
 					</table>
 
-					<table id="callBack" class="table table-striped fixed_header" style="margin-bottom: 0">
+					<table class="table table-striped fixed_header" id="callBack" style="margin-bottom: 0">
 						<p class="tableName">Call Back</p>
 						<thead>
 							<tr id="h_callBack">
@@ -169,17 +175,17 @@
 								<th style="width: 46px">Time</th>
 							</tr>
 						</thead>
-						<tbody id="b_callBack"></tr>
+						<tbody id="b_callBack">
+							
 						</tbody>
 					</table>
 				</div>
 
 				<div class="col-9" style="padding: 0">
-					<div class="row silentBar">
+					<div class="row silentBar" id="silentBar">
 						<div class="col">
 							<div class="centerV float-right">
-								<p style="font-size: 16px; display: inline; padding-right: 5px">Silent Number: <span
-										id="silentNum">7500</span></p>
+								<p style="font-size: 16px; display: inline; padding-right: 5px">Silent Number: <span class="silentNum" id="silentNum">7500</span></p>
 								<button>
 									<img src="icon/Ui Buttons (10).png">
 								</button>
@@ -199,55 +205,55 @@
 	</div>
 </body>
 
-<script type="text/template" data-template="listitem"  id="card">
+<script id="card" data-template="listitem" type="text/template">
 	<div class="col-5th">
 		<div class="card ">
-			<div id="cardHead" class="cardHead">
+			<div class="cardHead" id="cardHead">
 				<div class="row centerV">
 					<div class="col-9">
-						<p id="name" class="centerV float-left"></p>
+						<p class="centerV float-left name" id="name"></p>
 					</div>
 					<div class="col-3">
-						<p id="extNum" class="centerV float-right" style="font-size: 14px;"></p>
+						<p class="centerV float-right extNum" id="extNum" style="font-size: 14px;"></p>
 					</div>
 				</div>
 			</div>
-			<div id="cardBody" class="card-body">
+			<div class="card-body info-wrapup" id="cardBody">
 				<div class="row" style="padding-bottom: 10px; height: 55px">
 					<div class="col-4" style="padding-right: 0">
-						<img class="rounded-circle" id="profile" style="max-width:80%; border: 1px solid #d4dff5">
+						<img class="rounded-circle profile" id="profile" style="max-width:80%; border: 1px solid #d4dff5">
 					</div>
 					<div class="col-8">
 						<div class="row">
 							<div class="col-7" style="padding: 0">
 								<div class="container row" style="margin-left: 0; padding: 0">
-									<p id="status" style="font-weight: bold"></p>
+									<p class="status" id="status" style="font-weight: bold"></p>
 								</div>
 								<div class="container row">
-									<p id="phoneNum" style="font-weight: bold; color: #000"></p>
+									<p class="phoneNum" id="phoneNum" style="font-weight: bold; color: #000"></p>
 								</div>
 							</div>
 							<div class="col-5">
-								<img id="phoneIcon" style="max-width:100%;">
+								<img class="phoneIcon" id="phoneIcon" style="max-width:100%;">
 							</div>
 						</div>
 						<div class="row" style="padding-left: 0; margin-right: 0">
-							<p id="cusName" style="color: #000"></p>
+							<p class="cusName" id="cusName" style="color: #000"></p>
 						</div>
 					</div>
 				</div>
 				<div class="row callStat" style="height: 35px">
 					<div class="col-4" style="margin-left: 3px">
-						<p class="centerV centerH" id="time"></p>
+						<p class="centerV centerH time" id="time"></p>
 					</div>
 					<div class="col">
-						<p class="centerV centerH"><span id="inc"></span><br>INC</p>
+						<p class="centerV centerH"><span class="inc" id="inc"></span><br>INC</p>
 					</div>
 					<div class="col">
-						<p class="centerV centerH"><span id="oc"></span><br>OC</p>
+						<p class="centerV centerH"><span class="oc" id="oc"></span><br>OC</p>
 					</div>
 					<div class="col">
-						<p class="centerV centerH"><span id="tt"></span><br>TT</p>
+						<p class="centerV centerH"><span class="tt" id="tt"></span><br>TT</p>
 					</div>
 				</div>
 			</div>
@@ -255,30 +261,30 @@
 	</div>
 </script>
 
-<script type="text/template" data-template="listitem" id="waitingCall_tr">
+<script id="waitingCall_tr" data-template="listitem" type="text/template">
 	<tr>
-		<td id="waiting_num" style="width: 32px"></td>
-		<td id="waiting_phone" style="width: 86px"></td>
-		<td id="waiting_name" style="width: 109px"></td>
-		<td id="waiting_time" style="width: 77px"></td>
+		<td class="waiting_num" id="waiting_num" style="width: 32px"></td>
+		<td class="waiting_phone" id="waiting_phone" style="width: 86px"></td>
+		<td class="waiting_name" id="waiting_name" style="width: 109px"></td>
+		<td class="waiting_time" id="waiting_time" style="width: 77px"></td>
 	</tr>
 </script>
 
-<script type="text/template" data-template="listitem" id="agentQueue_tr">
+<script id="agentQueue_tr" data-template="listitem" type="text/template">
 	<tr>
-		<td style="width: 33px" id="agent_num">1.</td>
-		<td style="width: 141px" id="agent_name">Name Surname</td>
-		<td style="width: 62px" id="agent_ext">7501</td>
-		<td style="width: 68px" id="agent_time">0:00:00</td>
+		<td class="agent_num" id="agent_num" style="width: 33px">1.</td>
+		<td class="agent_name" id="agent_name" style="width: 141px">Name Surname</td>
+		<td class="agent_ext" id="agent_ext" style="width: 62px">7501</td>
+		<td class="agent_time" id="agent_time" style="width: 68px">0:00:00</td>
 	</tr>
 </script>
 
-<script type="text/template" data-template="listitem" id="callBack_tr">
+<script id="callBack_tr" data-template="listitem" type="text/template">
 	<tr>
-		<td style="width: 33px" id="callback_num">1.</td>
-		<td style="width: 91px" id="callback_phone">0987654321</td>
-		<td style="width: 135px" id="callback_name">Name Surname</td>
-		<td style="width: 46px" id="callback_time">0:00:00</td>
+		<td class="callback_num" id="callback_num" style="width: 33px">1.</td>
+		<td class="callback_phone" id="callback_phone" style="width: 91px">0987654321</td>
+		<td class="callback_name" id="callback_name" style="width: 135px">Name Surname</td>
+		<td class="callback_time" id="callback_time" style="width: 46px">0:00:00</td>
 	</tr>
 </script>
 

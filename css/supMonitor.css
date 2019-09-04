@@ -22,7 +22,45 @@ body {
 	margin-right: auto;
 }
 
-.status {
+:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+a:hover {
+	color: transparent
+}
+
+
+
+
+.teamBar {
+	background-color: #1180ae;
+	height: 50px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #ffffff
+}
+
+option {
+	color: black;
+}
+
+select {
+	background-color: transparent;
+	font-weight: bold;
+	border: none;
+	padding: 0;
+	color: #FFFFFF;
+	width: auto;
+	margin-bottom: 0
+}
+
+
+
+
+.statusBar {
     height: 85px;
 	margin-right: 10px;
 	padding: 0 15px
@@ -85,10 +123,28 @@ body {
 	color: #6a6769;
 }
 
-.card-body > div > div > div > div> div > p, .card-body > div > div> div > p {
+.status, .phoneNum, .cusName {
 	font-size: 10px;
 	margin-bottom: 0
 }
+
+.info-wrapup {
+	background-color: #ffe699
+}
+
+.cardHead-ready {
+	background-color: #4ad762
+}
+
+.cardHead-wrapup {
+	background-color: #f0ce0e
+}
+
+.cardHead-notready {
+	background-color: #e44141
+}
+
+
 
 .callStat {
 	padding-left: 10px;
@@ -105,6 +161,9 @@ body {
 	border-radius: 5px;
 	text-align: center
 }
+
+
+
 
 .tableName {
 	height: 28px;

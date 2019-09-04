@@ -22,6 +22,14 @@ body {
     transform: translateY(-50%);
 }
 
+:focus {
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+a:hover {
+	color: transparent
+}
 
 
 
@@ -40,7 +48,6 @@ body {
     border-top-right-radius: 0;
 }
 
-/* :focus {
-	box-shadow: none !important;
-	outline: none !important;
-} */
+#bt_signin:hover {
+    background-color: #2d80d8
+}
