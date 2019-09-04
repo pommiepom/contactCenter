@@ -25,7 +25,7 @@ body {
 .status {
     height: 85px;
 	margin-right: 10px;
-	padding: 0
+	padding: 0 15px
 }
 
 .statistic p {
@@ -138,11 +138,15 @@ th {
 	padding-bottom: 0 !important
 }
 
-.table-striped>tbody>tr:nth-child(odd)>td {
+td {
+	height: 28px;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td {
 	background-color: #ffffff;
 }
 
-.table-striped>tbody>tr:nth-child(even)>td {
+.table-striped > tbody>tr:nth-child(even) > td {
 	background-color: #f2f2f2;
 }
 
