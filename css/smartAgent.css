@@ -82,8 +82,12 @@ select {
 	padding: 0
 }
 
+.groupButton > a {
+	display: inline
+}
+
 .groupButton > a > img {
-	height: 65%
+	height: 50%
 }
 
 input[type="text"] {

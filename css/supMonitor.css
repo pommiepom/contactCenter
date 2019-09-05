@@ -125,10 +125,30 @@ select {
 
 .status, .phoneNum, .cusName {
 	font-size: 10px;
-	margin-bottom: 0
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
 }
 
-.info-wrapup {
+.status {
+	margin-bottom: 3px
+}
+
+.phoneNum {
+	color: #000
+}
+
+.cusName {
+	color: #000000;
+	font-weight: normal;
+	margin-left: -15px
+}
+
+.info-notCalling {
+	background-color: #ffffff
+}
+
+.info-calling {
 	background-color: #ffe699
 }
 
@@ -136,11 +156,11 @@ select {
 	background-color: #4ad762
 }
 
-.cardHead-wrapup {
+.cardHead-wrapUp {
 	background-color: #f0ce0e
 }
 
-.cardHead-notready {
+.cardHead-notReady {
 	background-color: #e44141
 }
 
@@ -233,4 +253,14 @@ td {
 
 .fixed_header th, .fixed_header td {
   width: 200px;
+}
+
+p {
+	word-break: break-all 
+}
+
+
+#cardGroup {
+	display:block;
+	overflow: auto;
 }

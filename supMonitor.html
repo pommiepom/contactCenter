@@ -81,12 +81,12 @@
 							<div class="col statusBar" style="background-color: #5c7148">
 								<div class="row">
 									<div class="col">
-										<p class="centerV" style="font-weight: bold; font-size: 36px">0</p>
+										<p class="centerV allCall" id="allCall" style="font-weight: bold; font-size: 36px">0</p>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col">
-										<p class="centerV allCall" id="allCall" style="font-size: 16px">All Call &#40In&#41</p>
+										<p class="centerV allCall" style="font-size: 16px">All Call &#40In&#41</p>
 									</div>
 								</div>
 							</div>
@@ -190,7 +190,7 @@
 									<img src="icon/Ui Buttons (10).png">
 								</button>
 								<button>
-									<img src="icon/Ui Buttons (10).png">
+									<img src="icon/pause.png">
 								</button>
 							</div>
 						</div>
@@ -213,12 +213,12 @@
 					<div class="col-9">
 						<p class="centerV float-left name" id="name"></p>
 					</div>
-					<div class="col-3">
-						<p class="centerV float-right extNum" id="extNum" style="font-size: 14px;"></p>
+					<div class="col-3" style="padding-left: 0">
+						<p class="centerV float-right extNum" id="extNum" style="font-size: 12px;"></p>
 					</div>
 				</div>
 			</div>
-			<div class="card-body info-wrapup" id="cardBody">
+			<div class="card-body" id="cardBody">
 				<div class="row" style="padding-bottom: 10px; height: 55px">
 					<div class="col-4" style="padding-right: 0">
 						<img class="rounded-circle profile" id="profile" style="max-width:80%; border: 1px solid #d4dff5">
@@ -226,20 +226,14 @@
 					<div class="col-8">
 						<div class="row">
 							<div class="col-7" style="padding: 0">
-								<div class="container row" style="margin-left: 0; padding: 0">
-									<p class="status" id="status" style="font-weight: bold"></p>
-								</div>
-								<div class="container row">
-									<p class="phoneNum" id="phoneNum" style="font-weight: bold; color: #000"></p>
-								</div>
+								<div class="row status" id="status"></div>
+								<div class="row phoneNum" id="phoneNum" style="padding-right: 0; margin-right: 0; font-weight: bold; color: #000"></div>
 							</div>
 							<div class="col-5">
 								<img class="phoneIcon" id="phoneIcon" style="max-width:100%;">
 							</div>
 						</div>
-						<div class="row" style="padding-left: 0; margin-right: 0">
-							<p class="cusName" id="cusName" style="color: #000"></p>
-						</div>
+						<div class="row cusName" id="cusName"></div>
 					</div>
 				</div>
 				<div class="row callStat" style="height: 35px">

@@ -1,4 +1,55 @@
 $(function () {
+	const doc = {
+		name: "Name Surname",
+		callTime: new Date(),
+		ext: "7500",
+		loginTime: new Date(),
+		logonTime: new Date(),
+		talkTime: new Date(),
+		order: "",
+		waitCall: 5,
+		waitCall_time: new Date(),
+		dropCall: 13,
+		dropCall_time: new Date(),
+		inCall: 23,
+		outCall: 14,
+		missCall: 2
+	}
+
+	const name = doc.name
+	const callTime = (doc.callTime.getHours() + ":" + ("0" + doc.callTime.getMinutes()).slice(-2) + ":" + ("0" + doc.callTime.getSeconds()).slice(-2))
+	const ext = doc.ext
+	const loginTime = (doc.loginTime.getHours() + ":" + ("0" + doc.loginTime.getMinutes()).slice(-2) + ":" + ("0" + doc.loginTime.getSeconds()).slice(-2))
+	const logonTime = (doc.logonTime.getHours() + ":" + ("0" + doc.logonTime.getMinutes()).slice(-2) + ":" + ("0" + doc.logonTime.getSeconds()).slice(-2))
+	const talkTime = (doc.talkTime.getHours() + ":" + ("0" + doc.talkTime.getMinutes()).slice(-2) + ":" + ("0" + doc.talkTime.getSeconds()).slice(-2))
+	const order = doc.order
+	const waitCall = ("0" + doc.waitCall).slice(-2)
+	const waitCall_time = (doc.waitCall_time.getHours() + ":" + ("0" + doc.waitCall_time.getMinutes()).slice(-2) + ":" 
+						+ ("0" + doc.waitCall_time.getSeconds()).slice(-2))
+	const dropCall = ("0" + doc.dropCall).slice(-2)
+	const dropCall_time = (doc.dropCall_time.getHours() + ":" + ("0" + doc.dropCall_time.getMinutes()).slice(-2) + ":"
+						+ ("0" + doc.dropCall_time.getSeconds()).slice(-2))
+	const inCall = ("00" + doc.inCall).slice(-3)
+	const outCall = ("00" + doc.outCall).slice(-3)
+	const missCall = ("00" + doc.missCall).slice(-3)
+
+	$("#name").text(name)
+	$("#callTime").text(callTime)
+	$("#ext").text(ext)
+	$("#loginTime").text(loginTime)
+	$("#logonTime").text(logonTime)
+	$("#talkTime").text(talkTime)
+	$("#order").text(order)
+	$("#waitCall").text(waitCall)
+	$("#waitCall_time").text(waitCall_time)
+	$("#dropCall").text(dropCall)
+	$("#dropCall_time").text(dropCall_time)
+	$("#inCall").text(inCall)
+	$("#outCall").text(outCall)
+	$("#missCall").text(missCall)
+
+
+
 
 	const setState = () => {
 		if ($("#state").val() == "ready") {
@@ -8,22 +59,6 @@ $(function () {
 			$(".statusBar").css({ "background-color": "#e44141" })
 		}
 	}
-
-	// name
-	// state
-	// time = (doc.time.getHours() + ":" + ("0" + doc.time.getMinutes()).slice(-2) + ":" + ("0" + doc.time.getSeconds()).slice(-2)
-	// ext
-	// loginTime = (doc.loginTime.getHours() + ":" + ("0" + doc.loginTime.getMinutes()).slice(-2) + ":" + ("0" + doc.loginTime.getSeconds()).slice(-2)
-	// logonTime = (doc.logonTime.getHours() + ":" + ("0" + doc.logonTime.getMinutes()).slice(-2) + ":" + ("0" + doc.logonTime.getSeconds()).slice(-2)
-	// order
-	// waitCall = ("0" + doc.waitCall).slice(-3)
-	// waitCall_time = (doc.waitCall_time.getHours() + ":" + ("0" + doc.waitCall_time.getMinutes()).slice(-2) + ":" + ("0" + doc.waitCall_time.getSeconds()).slice(-2)
-	// dropCall = ("0" + doc.dropCall).slice(-3)
-	// dropCall_time = (doc.dropCall_time.getHours() + ":" + ("0" + doc.dropCall_time.getMinutes()).slice(-2) + ":" + ("0" + doc.dropCall_time.getSeconds()).slice(-2)
-	// callIn = ("00" + doc.callIn).slice(-3)
-	// callOut = ("00" + doc.callOut).slice(-3)
-	// missCall = ("00" + doc.missCall).slice(-3)
-
 	
 	setState();
 
