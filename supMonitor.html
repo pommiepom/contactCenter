@@ -184,7 +184,7 @@
 				<div class="col-9" style="padding: 0">
 					<div class="row silentBar" id="silentBar">
 						<div class="col">
-							<div class="centerV float-right">
+							<div class="centerV float-right" id="componentSilent">
 								<p style="font-size: 16px; display: inline; padding-right: 5px">Silent Number: <span class="silentNum" id="silentNum">7500</span></p>
 								<button>
 									<img src="icon/Ui Buttons (10).png">
@@ -205,9 +205,9 @@
 	</div>
 </body>
 
-<script id="card" data-template="listitem" type="text/template">
+<script id="cardEle" data-template="listitem" type="text/template">
 	<div class="col-5th">
-		<div class="card ">
+		<div class="card" id="card">
 			<div class="cardHead" id="cardHead">
 				<div class="row centerV">
 					<div class="col-9">

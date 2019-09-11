@@ -1,5 +1,6 @@
 $(function () {
 	const doc = {
+		profile: "images/profilePicture.png",
 		name: "Name Surname",
 		callTime: new Date(),
 		ext: "7500",
@@ -16,6 +17,7 @@ $(function () {
 		missCall: 2
 	}
 
+	const profile = doc.profile
 	const name = doc.name
 	const callTime = (doc.callTime.getHours() + ":" + ("0" + doc.callTime.getMinutes()).slice(-2) + ":" + ("0" + doc.callTime.getSeconds()).slice(-2))
 	const ext = doc.ext
@@ -33,6 +35,7 @@ $(function () {
 	const outCall = ("00" + doc.outCall).slice(-3)
 	const missCall = ("00" + doc.missCall).slice(-3)
 
+	$("#profile").attr("src", profile)
 	$("#name").text(name)
 	$("#callTime").text(callTime)
 	$("#ext").text(ext)
@@ -72,5 +75,32 @@ $(function () {
 		$('#phoneSearch').val('').focus()
 	})
 	
+	$("#profile").css('cursor', 'pointer')
+	$("#button_waitCall").css('cursor', 'pointer')
+	$("#button_dropCall").css('cursor', 'pointer')
+	$("#bt_setting").css('cursor', 'pointer')
 	
+	$("#bt_setting").click(() => {
+		$("#myModal").modal();
+	 });
+
+
+
+
+
+
+	 
+	 var $diaplay = $('#display'), counter = 0;
+    $('.marquee')
+        .bind('beforeStarting', function(){
+            $diaplay.show().html('started').delay(1000).fadeOut('fast');
+        })
+        .bind('finished', function(){
+            counter++;
+            $diaplay.show().html('finished ' + counter + ' times').delay(1000).fadeOut('fast');
+        })
+        //Apply plugin
+    .marquee({
+        duration: 5000
+    })
 })

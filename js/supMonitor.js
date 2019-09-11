@@ -278,7 +278,8 @@ $(function () {
 		const tt = docCard.tt
 		const calling = docCard.calling
 		
-		$('#cardGroup').append($("#card").html());
+		$('#cardGroup').append($("#cardEle").html());
+		$("#card").attr("id", "card-" + index)
 
 		$("#name").attr("id", "name-" + index);
 		$("#extNum").attr("id", "extNum-" + index);

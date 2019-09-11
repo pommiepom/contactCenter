@@ -15,9 +15,8 @@
 <body>
 	<div class="divScreen">
 		<div class="row statusBar">
-			<div class="col-2" style="padding-right: 0">
-				<img class="rounded-circle centerV" id="profile" src="images/profilePicture.png"
-					style="max-width:100%;">
+			<div class="col-2" style="padding-right: 0; height: 100%">
+				<img class="rounded-circle centerV" id="profile" style="max-width:100%">
 			</div>
 			<div class="col-5" style="padding-left: 25; padding-right: 0">
 				<div class="container-fluid centerV" style="padding: 0">
@@ -37,9 +36,9 @@
 			</div>
 
 			<div class="col-2">
-				<a href="">
-					<img class="centerV" src="icon/settings-work-tool.png" alt="setting" style="width: 55%">
-				</a>
+				<!-- <a > -->
+					<img id="bt_setting" class="centerV" src="icon/settings-work-tool.png" alt="setting" style="width: 55%">
+				<!-- </a> -->
 			</div>
 		</div>
 
@@ -55,19 +54,19 @@
 			</div>
 			<div class="col-5" style="padding-left: 0; padding-right: 5">
 				<div class="container groupButton centerV">
-					<a href="">
+					<a id="makeCall">
 						<img src="icon/Ui Buttons (9).png">
 					</a>
-					<a href="">
+					<a id="holdCall">
 						<img src="icon/call-pause.png">
 					</a>
-					<a href="">
+					<a id="consultCall">
 						<img src="icon/call-out.png">
 					</a>
-					<a href="">
+					<a id="transferCall">
 						<img src="icon/call-add.png">
 					</a>
-					<a href="">
+					<a id="conferenceCall">
 						<img src="icon/call-people.png">
 					</a>
 				</div>
@@ -121,7 +120,6 @@
 									<th>Login Time</th>
 									<th>Logon Time</th>
 									<th>Talk Time</th>
-									<th>Order</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -129,42 +127,44 @@
 									<td class="loginTime" id="loginTime">00:00</td>
 									<td class="logonTime" id="logonTime">0:00:00</td>
 									<td class="talkTime" id="talkTime">0:00:00</td>
-									<td class="order" id="order"></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 
+					<div class="marquee">jQuery marquee is the best marquee plugin in the world</div>
+					<div id='display'></div>
+
 					<div class="row callStat">
 						<div class="container-fluid">
 							<div class="row">
-								<div class="col-6 borderCol" style="background-color: #00bceb">
-									<div class="container-fluid centerV">
-										<div class="row">
+								<div class="col-6" style="height: 40px; padding: 1px">
+									<div class="container-fluid borderCol" id="button_waitCall" style="background-color: #00bceb">
+										<div class="row centerV">
 											<div class="col-3">
-												<img class="centerH" src="icon/telemarketer-List.png" style="height: 65%">
+												<img class="centerH" src="icon/telemarketer-List.png" style="height: 100%">
 											</div>
 											<div class="col-3">
 												<p class="centerV waitCall" id="waitCall"
 													style="font-size: 16px; font-weight: bold">00</p>
 											</div>
-											<div class="col-6">
+											<div class="col-6" style="padding-left: 5px">
 												<p class="centerV waitCall_time" id="waitCall_time">0:00:00</p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-6 borderCol" style="background-color: #e44141">
-									<div class="container-fluid centerV">
-										<div class="row">
+								<div class="col-6" style="height: 40px; padding: 1px" >
+									<div class="container-fluid borderCol" id="button_dropCall" style="background-color: #e44141">
+										<div class="row centerV">
 											<div class="col-3">
-												<img class="centerH" src="icon/hot-line.png" style="height: 65%">
+												<img class="centerH" src="icon/hot-line.png" style="height: 100%">
 											</div>
 											<div class="col-3">
 												<p class="centerV dropCall" id="dropCall"
 													style="font-size: 16px; font-weight: bold">00</p>
 											</div>
-											<div class="col-6">
+											<div class="col-6" style="padding-left: 5px">
 												<p class="centerV dropCall_time" id="dropCall_time">0:00:00</p>
 											</div>
 										</div>
@@ -172,37 +172,37 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-4 borderCol" style="background-color: #49d761">
-									<div class="container-fluid centerV">
-										<div class="row">
+								<div class="col-4" style="height: 40px; padding: 1px" >
+									<div class="container-fluid borderCol" style="background-color: #49d761">
+										<div class="row centerV">
 											<div class="col-6">
-												<img class="centerH" src="icon/phone-call in.png" style="height: 65%">
+												<img class="centerH" src="icon/phone-call in.png" style="height: 100%">
 											</div>
-											<div class="col-6">
+											<div class="col-6" style="padding-left: 5px">
 												<p class="centerV inCall" id="inCall">000</p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-4 borderCol" style="background-color: #f0ce0e">
-									<div class="container-fluid centerV">
-										<div class="row">
+								<div class="col-4" style="height: 40px; padding: 1px">
+									<div class="container-fluid borderCol" style="background-color: #f0ce0e">
+										<div class="row centerV">
 											<div class="col-6">
-												<img class="centerH" src="icon/phone-call out.png" style="height: 65%">
+												<img class="centerH" src="icon/phone-call out.png" style="height: 100%">
 											</div>
-											<div class="col-6">
+											<div class="col-6" style="padding-left: 5px">
 												<p class="centerV outCall" id="outCall">000</p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-4 borderCol" style="background-color: #e44141">
-									<div class="container-fluid centerV">
-										<div class="row">
+								<div class="col-4" style="height: 40px; padding: 1px" style="background-color: #e44141">
+									<div class="container-fluid borderCol" style="background-color: #e44141">
+										<div class="row centerV">
 											<div class="col-6">
-												<img class="centerH" src="icon/phone-call abandon.png" style="height: 65%">
+												<img class="centerH" src="icon/phone-call abandon.png" style="height: 100%">
 											</div>
-											<div class="col-6">
+											<div class="col-6" style="padding-left: 5px">
 												<p class="centerV missCall" id="missCall">000</p>
 											</div>
 										</div>
@@ -216,6 +216,29 @@
 		</div>
 
 	</div>
+	<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </body>
+<!-- <script id="modal" data-template="listitem" type="text/template">
+
+  
+</script> -->
 
 </html>
