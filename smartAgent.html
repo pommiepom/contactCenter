@@ -4,7 +4,8 @@
 <head>
 	<script src="libs/jquery-3.4.1.min.js"></script>
 	<link href="libs/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./libs/font-awesome.css" rel="stylesheet">
+	<link href="libs/font-awesome.css" rel="stylesheet">
+	<script src="libs/jQuery.Marquee-master/jquery.marquee.min.js"></script>
 	<script src="libs/js/bootstrap.min.js"></script>
 
 	<script src="js/smartAgent.js"></script>
@@ -60,11 +61,11 @@
 					<a id="holdCall">
 						<img src="icon/call-pause.png">
 					</a>
-					<a id="consultCall">
-						<img src="icon/call-out.png">
-					</a>
 					<a id="transferCall">
 						<img src="icon/call-add.png">
+					</a>
+					<a id="consultCall">
+						<img src="icon/call-out.png">
 					</a>
 					<a id="conferenceCall">
 						<img src="icon/call-people.png">
@@ -102,6 +103,12 @@
 							</a>
 						</li>
 						<li class="nav-item">
+								<a class="nav-link" id="bt_voiceRecord" href="#">
+									<img src="icon/concrete-mixer.png">
+									<p>Voice Record</p>
+								</a>
+							</li>
+						<li class="nav-item">
 							<a class="nav-link" id="bt_monitor" href="#">
 								<img src="icon/call-center sup monitor.png">
 								<p>Monitor</p>
@@ -132,8 +139,28 @@
 						</table>
 					</div>
 
-					<div class="marquee">jQuery marquee is the best marquee plugin in the world</div>
-					<div id='display'></div>
+					<div class="row">
+						<div class="marquee" id="runningText"></div>
+					</div>
+
+					<div class="row">
+						<table class="table">
+							<thead class="thead-light">
+								<tr>
+									<th>Login Time</th>
+									<th>Logon Time</th>
+									<th>Talk Time</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="loginTime" id="loginTime">00:00</td>
+									<td class="logonTime" id="logonTime">0:00:00</td>
+									<td class="talkTime" id="talkTime">0:00:00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
 					<div class="row callStat">
 						<div class="container-fluid">

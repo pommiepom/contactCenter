@@ -26,11 +26,11 @@ $(function () {
 	const talkTime = (doc.talkTime.getHours() + ":" + ("0" + doc.talkTime.getMinutes()).slice(-2) + ":" + ("0" + doc.talkTime.getSeconds()).slice(-2))
 	const order = doc.order
 	const waitCall = ("0" + doc.waitCall).slice(-2)
-	const waitCall_time = (doc.waitCall_time.getHours() + ":" + ("0" + doc.waitCall_time.getMinutes()).slice(-2) + ":" 
-						+ ("0" + doc.waitCall_time.getSeconds()).slice(-2))
+	const waitCall_time = (doc.waitCall_time.getHours() + ":" + ("0" + doc.waitCall_time.getMinutes()).slice(-2) + ":" +
+		("0" + doc.waitCall_time.getSeconds()).slice(-2))
 	const dropCall = ("0" + doc.dropCall).slice(-2)
-	const dropCall_time = (doc.dropCall_time.getHours() + ":" + ("0" + doc.dropCall_time.getMinutes()).slice(-2) + ":"
-						+ ("0" + doc.dropCall_time.getSeconds()).slice(-2))
+	const dropCall_time = (doc.dropCall_time.getHours() + ":" + ("0" + doc.dropCall_time.getMinutes()).slice(-2) + ":" +
+		("0" + doc.dropCall_time.getSeconds()).slice(-2))
 	const inCall = ("00" + doc.inCall).slice(-3)
 	const outCall = ("00" + doc.outCall).slice(-3)
 	const missCall = ("00" + doc.missCall).slice(-3)
@@ -56,13 +56,16 @@ $(function () {
 
 	const setState = () => {
 		if ($("#state").val() == "ready") {
-			$(".statusBar").css({ "background-color": "#49d761" })
-		}
-		else if ($("#state").val() == "notReady") {
-			$(".statusBar").css({ "background-color": "#e44141" })
+			$(".statusBar").css({
+				"background-color": "#49d761"
+			})
+		} else if ($("#state").val() == "notReady") {
+			$(".statusBar").css({
+				"background-color": "#e44141"
+			})
 		}
 	}
-	
+
 	setState();
 
 	// change state
@@ -74,33 +77,21 @@ $(function () {
 	$('#clearInput').on('click', () => {
 		$('#phoneSearch').val('').focus()
 	})
-	
+
 	$("#profile").css('cursor', 'pointer')
 	$("#button_waitCall").css('cursor', 'pointer')
 	$("#button_dropCall").css('cursor', 'pointer')
 	$("#bt_setting").css('cursor', 'pointer')
-	
+
 	$("#bt_setting").click(() => {
 		$("#myModal").modal();
-	 });
+	});
 
 
 
 
 
 
-	 
-	 var $diaplay = $('#display'), counter = 0;
-    $('.marquee')
-        .bind('beforeStarting', function(){
-            $diaplay.show().html('started').delay(1000).fadeOut('fast');
-        })
-        .bind('finished', function(){
-            counter++;
-            $diaplay.show().html('finished ' + counter + ' times').delay(1000).fadeOut('fast');
-        })
-        //Apply plugin
-    .marquee({
-        duration: 5000
-    })
+	$("#runningText").text("Running Text")
+	$('.marquee').marquee({ duration: 7500 })
 })

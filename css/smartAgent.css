@@ -144,7 +144,7 @@ a.nav-link {
 }
 
 li.nav-item {
-	margin-bottom: 15px
+	margin-bottom: 10px
 }
 
 .nav-link > img {
@@ -157,6 +157,10 @@ li.nav-item {
 
 
 
+
+.table {
+	margin-bottom: 0
+}
 
 th, td {
 	font-size: 12px;
@@ -205,8 +209,8 @@ th {
 
 
 .marquee {
-	width: 300px;
+	color: #495057;
 	overflow: hidden;
-	border: 1px solid #ccc;
-	background: #ccc;
- }
+	font-size: 12px;
+	margin: 5px 0;
+}

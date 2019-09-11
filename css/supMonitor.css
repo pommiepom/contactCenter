@@ -230,7 +230,7 @@ td {
 }
 
 
-
+/* 
 .fixed_header{
 	width: 100%;
 	table-layout: fixed;
@@ -257,7 +257,7 @@ td {
 
 p {
 	word-break: break-all 
-}
+} */
 
 
 #cardGroup {
