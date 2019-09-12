@@ -1,14 +1,6 @@
 body {
 	margin: 0px !important;
-	background-color: black
-}
-
-.divScreen {
-	width: 1300px;
-	height: 700px;
-	margin: 0 !important;
-	padding: 0;
-	background-color: #e9ebee;
+	background-color: #e9ebee
 }
 
 .centerV {
@@ -22,7 +14,7 @@ body {
 	margin-right: auto;
 }
 
-:focus {
+*:focus {
 	box-shadow: none !important;
 	outline: none !important;
 }
@@ -31,12 +23,16 @@ a:hover {
 	color: transparent
 }
 
+.form-control:focus {
+	border-color: rgb(179, 182, 185)
+}
 
 
 
 .teamBar {
 	background-color: #1180ae;
 	height: 50px;
+	margin: 0;
 	margin-bottom: 10px;
 	font-size: 20px;
 	font-weight: bold;
@@ -44,10 +40,10 @@ a:hover {
 }
 
 option {
-	color: black;
+	color: #6a6769;
 }
 
-select {
+select#team {
 	background-color: transparent;
 	font-weight: bold;
 	border: none;
@@ -57,6 +53,12 @@ select {
 	margin-bottom: 0
 }
 
+.silentBar select {
+	background-color: transparent;
+	padding: 0;
+	color: #6a6769;
+	margin-bottom: 0
+}
 
 
 
@@ -64,6 +66,10 @@ select {
     height: 85px;
 	margin-right: 10px;
 	padding: 0 15px
+}
+
+.statistic {
+	margin: 0
 }
 
 .statistic p {
@@ -92,7 +98,7 @@ select {
 	float: left;
 	width: 20%;
 	color: #000;
-	padding: 0 10px 10px 0
+	/* padding: 0 10px 10px 0 */
 }
 	
 .card {
@@ -116,6 +122,8 @@ select {
 
 .card {
 	border-radius: 0;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .card-body {
@@ -230,37 +238,12 @@ td {
 }
 
 
-/* 
-.fixed_header{
-	width: 100%;
-	table-layout: fixed;
-	border-collapse: collapse;
-}
-
-.fixed_header tbody{
-	display:block;
-	width: 100%;
-	overflow: auto;
-}
-
-#b_agentQueue {
-	max-height: 84px;
-}
-
-.fixed_header thead tr {
-   display: block;
-}
-
-.fixed_header th, .fixed_header td {
-  width: 200px;
-}
-
-p {
-	word-break: break-all 
-} */
 
 
 #cardGroup {
 	display:block;
 	overflow: auto;
+	overflow-x: hidden;
+	padding: 0;
+	margin-right: 10px;
 }

@@ -47,8 +47,8 @@ $(function () {
 			cusName: null,
 			time: new Date(),
 			inc: "0",
-			oc: "0",
-			tt: "0",
+			oc: "5",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -62,7 +62,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -76,7 +76,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -90,7 +90,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "reserved"
 		},
 		{
@@ -104,7 +104,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "inCall"
 		},
 		{
@@ -118,7 +118,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "wrapUp"
 		},
 		{
@@ -132,7 +132,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -146,7 +146,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "outCall"
 		},
 		{
@@ -160,7 +160,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -174,7 +174,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -188,7 +188,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "outCall"
 		},
 		{
@@ -202,7 +202,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -216,7 +216,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -230,7 +230,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 		{
@@ -244,7 +244,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "reserved"
 		},
 		{
@@ -258,7 +258,7 @@ $(function () {
 			time: new Date(),
 			inc: "0",
 			oc: "0",
-			tt: "0",
+			tt: new Date(),
 			calling: "notCalling"
 		},
 	]
@@ -275,7 +275,7 @@ $(function () {
 					":" + ("0" + docCard.time.getSeconds()).slice(-2)
 		const inc = docCard.inc
 		const oc = docCard.oc
-		const tt = docCard.tt
+		const tt = ("0" + docCard.tt.getHours()).slice(-2) + ":" + ("0" + docCard.tt.getMinutes()).slice(-2)
 		const calling = docCard.calling
 		
 		$('#cardGroup').append($("#cardEle").html());
@@ -546,7 +546,7 @@ $(function () {
 
 
 
-
+//$("body").height() - (($("#headRow").outerHeight(true) + $("#silentBar").outerHeight(true))+30)
 
 	if ($('#silentBar').css('display') == "none") {
 		$("#cardGroup").height(525)
@@ -556,6 +556,6 @@ $(function () {
 	}
 	
 	if ($("#cardGroup").prop('scrollHeight') > $("#cardGroup").height()) {
-		$("#cardGroup").css({"padding-right": "0px", "margin-right": "15px"})
+		$("#cardGroup").css({"padding-right": "0px"})
 	}
 })
