@@ -1,20 +1,15 @@
 body {
-    margin: 0px !important;
-    background-color: black
+    /* margin: 0px !important; */
+    background-color: #F8F8F8
 }
 
-.divScreen {
+/* .divScreen {
     width: 300px;
     height: 500px;
     margin: 0 !important;
     padding: 0;
     background-color: #F8F8F8;
-}
-
-.centerH {
-    margin-left: auto;
-    margin-right: auto;
-}
+} */
 
 .centerV {
     position: relative;

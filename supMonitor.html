@@ -26,10 +26,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-9" style="padding: 0">
+			<div class="col-9 p-0">
 				<div class="row teamBar">
 					<div class="col-1">
-						<p class="centerV" style="margin-bottom: 0">Team</p>
+						<p class="centerV mb-0">Team</p>
 					</div>
 					<div class="col-11">
 						<select class="form-control centerV" id="team" name="team">
@@ -45,7 +45,7 @@
 							<div class="col statusBar" style="background-color: #00bceb">
 								<div class="row">
 									<div class="col">
-										<p class="centerV waitCall" id="waitCall" style="font-weight: bold; font-size: 36px">0</p>
+										<p class="centerV waitCall font-weight-bold" id="waitCall" style="font-size: 36px">0</p>
 									</div>
 									<div class="col">
 										<p class="centerV waitCall_time" id="waitCall_time" style="font-size: 18px">0:00:00</p>
@@ -61,7 +61,7 @@
 							<div class="col statusBar" style="background-color: #e44141">
 								<div class="row">
 									<div class="col">
-										<p class="centerV callBack" id="callack" style="font-weight: bold; font-size: 36px">0</p>
+										<p class="centerV callBack font-weight-bold" id="callack" style="font-size: 36px">0</p>
 									</div>
 									<div class="col">
 										<p class="centerV callBack_time" id="callBack_time" style="font-size: 18px">0:00:00</p>
@@ -79,7 +79,7 @@
 					<div class="col statusBar" style="background-color: #5c7148">
 						<div class="row">
 							<div class="col">
-								<p class="centerV allCall" id="allCall" style="font-weight: bold; font-size: 36px">0</p>
+								<p class="centerV allCall font-weight-bold" id="allCall" style="font-size: 36px">0</p>
 							</div>
 						</div>
 						<div class="row">
@@ -92,7 +92,7 @@
 					<div class="col statusBar" style="background-color: #88b14b">
 						<div class="row">
 							<div class="col">
-								<p class="centerV ansCall" id="ansCall" style="font-weight: bold; font-size: 36px">0</p>
+								<p class="centerV ansCall font-weight-bold" id="ansCall" style="font-size: 36px">0</p>
 							</div>
 						</div>
 						<div class="row">
@@ -105,7 +105,7 @@
 					<div class="col statusBar" style="background-color: #d74061">
 						<div class="row">
 							<div class="col">
-								<p class="centerV dropCall" id="dropCall" style="font-weight: bold; font-size: 36px">0</p>
+								<p class="centerV dropCall font-weight-bold" id="dropCall" style="font-size: 36px">0</p>
 							</div>
 						</div>
 						<div class="row">
@@ -118,7 +118,7 @@
 					<div class="col statusBar" style="background-color: #ef562d">
 						<div class="row">
 							<div class="col">
-								<p class="centerV perDropCall" style="font-weight: bold; font-size: 36px">
+								<p class="centerV perDropCall font-weight-bold" style="font-size: 36px">
 									<span id="perDropCall">0</span>%
 								</p>
 							</div>
@@ -136,7 +136,7 @@
 
 		<div class="row" id="supBody" style=" height: 75%;">
 			<div class="col-3" style="padding: 0 10px; max-height: 100%;">
-				<table class="table table-striped" id="waitingCall" style="margin-bottom: 0; border-bottom: none">
+				<table class="table table-striped mb-0 border-bottom-0" id="waitingCall">
 					<p class="tableName">Waiting Call</p>
 					<thead id="h_waitingCall">
 						<tr>
@@ -162,7 +162,7 @@
 					<tbody id="b_agentQueue"></tbody>
 				</table>
 
-				<table class="table table-striped fixed_header" id="callBack" style="margin-bottom: 0">
+				<table class="table table-striped fixed_header mb-0" id="callBack">
 					<p class="tableName">Call Back</p>
 					<thead>
 						<tr id="h_callBack">
@@ -178,7 +178,7 @@
 				</table>
 			</div>
 
-			<div class="col-9" style="padding: 0">
+			<div class="col-9 p-0">
 				<div class="row silentBar" id="silentBar">
 					<div class="col-4">
 						<select class="form-control form-control-sm centerV" id="card_orderby" name="card_orderby">
@@ -188,7 +188,7 @@
 							<option value="skill">Skill</option>
 						</select>
 					</div>
-					<div class="col-1" style="padding-left: 0">
+					<div class="col-1 pl-0">
 							<select class="form-control form-control-sm centerV" id="card_order" name="card_orderby">
 								<option value="asc">A-Z</option>
 								<option value="desc">Z-A</option>
@@ -196,7 +196,7 @@
 						</div>
 					<div class="col-7">
 						<div class="centerV float-right" id="componentSilent">
-							<p style="font-size: 16px; display: inline; padding-right: 5px">Silent Number: <span class="silentNum" id="silentNum">7500</span></p>
+							<p style="font-size: 16px; display: inline; padding-right: 5px">Silent Number: <span class="silentNum" id="silentNum"></span></p>
 							<button>
 								<img src="icon/Ui Buttons (10).png">
 							</button>
@@ -207,7 +207,7 @@
 					</div>
 				</div>
 
-				<div class="row" style="margin: 0">
+				<div class="row m-0">
 					<div class="container-fluid" id="cardGroup"></div>
 				</div>
 			</div>
@@ -223,23 +223,23 @@
 					<div class="col-9">
 						<p class="centerV float-left name" id="name"></p>
 					</div>
-					<div class="col-3" style="padding-left: 0">
+					<div class="col-3 pl-0">
 						<p class="centerV float-right extNum" id="extNum" style="font-size: 12px;"></p>
 					</div>
 				</div>
 			</div>
 			<div class="card-body" id="cardBody">
 				<div class="row" style="padding-bottom: 10px; height: 55px">
-					<div class="col-4" style="padding-right: 0">
+					<div class="col-4 pr-0">
 						<img class="rounded-circle profile" id="profile" style="height: 40px; border: 1px solid #d4dff5">
 					</div>
 					<div class="col-8">
 						<div class="row">
-							<div class="col-7" style="padding: 0">
+							<div class="col-7 p-0">
 								<div class="row status" id="status"></div>
-								<div class="row phoneNum" id="phoneNum" style="padding-right: 0; margin-right: 0; font-weight: bold; color: #000"></div>
+								<div class="row phoneNum mr-0 pr-0 font-weight-bold" id="phoneNum" style="color: #000000"></div>
 							</div>
-							<div class="col-5" style="height: 100%">
+							<div class="col-5">
 								<img class="phoneIcon" id="phoneIcon" style="height: 25px">
 							</div>
 						</div>
@@ -248,16 +248,16 @@
 				</div>
 				<div class="row callStat" style="height: 35px">
 					<div class="col" style="margin-left: 3px">
-						<p class="centerV centerH time" id="time"></p>
+						<p class="centerV time" id="time"></p>
 					</div>
 					<div class="col">
-						<p class="centerV centerH"><span class="inc" id="inc"></span><br>INC</p>
+						<p class="centerV"><span class="inc" id="inc"></span><br>INC</p>
 					</div>
 					<div class="col">
-						<p class="centerV centerH"><span class="oc" id="oc"></span><br>OC</p>
+						<p class="centerV"><span class="oc" id="oc"></span><br>OC</p>
 					</div>
 					<div class="col">
-						<p class="centerV centerH"><span class="tt" id="tt"></span><br>TT</p>
+						<p class="centerV"><span class="tt" id="tt"></span><br>TT</p>
 					</div>
 				</div>
 			</div>

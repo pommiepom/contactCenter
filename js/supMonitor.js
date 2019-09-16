@@ -387,15 +387,15 @@ $(function () {
 			const waiting_time = docWaiting[i].time.getHours() + ":" + ("0" + docWaiting[i].time.getMinutes()).slice(-2) +
 				":" + ("0" + docWaiting[i].time.getSeconds()).slice(-2)
 
-			$("#waiting_num-" + i).html(waiting_num)
-			$("#waiting_phone-" + i).html(waiting_phone)
-			$("#waiting_name-" + i).html(waiting_name)
-			$("#waiting_time-" + i).html(waiting_time)
+			$("#waiting_num-" + i).text(waiting_num)
+			$("#waiting_phone-" + i).text(waiting_phone)
+			$("#waiting_name-" + i).text(waiting_name)
+			$("#waiting_time-" + i).text(waiting_time)
 		} else {
-			$("#waiting_num-" + i).html(null)
-			$("#waiting_phone-" + i).html(null)
-			$("#waiting_name-" + i).html(null)
-			$("#waiting_time-" + i).html(null)
+			$("#waiting_num-" + i).text(null)
+			$("#waiting_phone-" + i).text(null)
+			$("#waiting_name-" + i).text(null)
+			$("#waiting_time-" + i).text(null)
 		}
 	}
 
@@ -460,15 +460,16 @@ $(function () {
 			const agent_time = docAgent[i].time.getHours() + ":" + ("0" + docAgent[i].time.getMinutes()).slice(-2) +
 				":" + ("0" + docAgent[i].time.getSeconds()).slice(-2)
 
-			$("#agent_num-" + i).html(agent_num)
-			$("#agent_name-" + i).html(agent_name)
-			$("#agent_ext-" + i).html(agent_ext)
-			$("#agent_time-" + i).html(agent_time)
-		} else {
-			$("#agent_num-" + i).html(null)
-			$("#agent_name-" + i).html(null)
-			$("#agent_ext-" + i).html(null)
-			$("#agent_time-" + i).html(null)
+			$("#agent_num-" + i).text(agent_num)
+			$("#agent_name-" + i).text(agent_name)
+			$("#agent_ext-" + i).text(agent_ext)
+			$("#agent_time-" + i).text(agent_time)
+		} 
+		else {
+			$("#agent_num-" + i).text(null)
+			$("#agent_name-" + i).text(null)
+			$("#agent_ext-" + i).text(null)
+			$("#agent_time-" + i).text(null)
 		}
 	}
 
@@ -537,15 +538,16 @@ $(function () {
 		const callback_time = docCallback[i].time.getHours() + ":" + ("0" + docCallback[i].time.getMinutes()).slice(-2) +
 			":" + ("0" + docCallback[i].time.getSeconds()).slice(-2)
 
-		$("#callback_num-" + i).html(callback_num)
-		$("#callback_phone-" + i).html(callback_phone)
-		$("#callback_name-" + i).html(callback_name)
-		$("#callback_time-" + i).html(callback_time)
+		$("#callback_num-" + i).text(callback_num)
+		$("#callback_phone-" + i).text(callback_phone)
+		$("#callback_name-" + i).text(callback_name)
+		$("#callback_time-" + i).text(callback_time)
 	}
 
 
 
 
+	$("#silentNum").text('7500')
 //$("body").height() - (($("#headRow").outerHeight(true) + $("#silentBar").outerHeight(true))+30)
 
 	if ($('#silentBar').css('display') == "none") {

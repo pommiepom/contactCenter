@@ -16,44 +16,41 @@
 <body>
 	<div class="divScreen">
 		<div class="row statusBar">
-			<div class="col-2" style="padding-right: 0; height: 100%">
+			<div class="col-2 pr-0">
 				<img class="rounded-circle centerV" id="profile" style="max-width:100%">
 			</div>
-			<div class="col-5" style="padding-left: 25; padding-right: 0">
-				<div class="container-fluid centerV" style="padding: 0">
-					<p class="name" id="name" style="margin: 0">Name Surname</p>
+			<div class="col-5 pr-0" style="padding-left: 25">
+				<div class="container-fluid centerV p-0">
+					<p class="name m-0" id="name">Name Surname</p>
 
 					<select id="state" name="state" style="font-size: 14px">
 						<option value="ready">Ready</option>
 						<option value="notReady">Not Ready</option>
 					</select>
 
-					<p class="callTime" id="callTime" style="margin: 0; font-size: 12px">0:00:00</p>
+					<p class="callTime m-0" id="callTime" style="font-size: 12px">0:00:00</p>
 				</div>
 			</div>
 
-			<div class="col-3" style="padding-right: 0">
+			<div class="col-3 pr-0">
 				<p class="centerV float-right extNum" id="extNum">7500</p>
 			</div>
 
 			<div class="col-2">
-				<!-- <a > -->
-					<img id="bt_setting" class="centerV" src="icon/settings-work-tool.png" alt="setting" style="width: 55%">
-				<!-- </a> -->
+				<img class="centerV" id="bt_setting" src="icon/settings-work-tool.png" style="width: 55%">
 			</div>
 		</div>
 
 		<div class="row functionBar">
 			<div class="col-7" style="padding-left: 15">
 				<div class="searchPhone centerV">
-					<input class="form-control phoneSearch" id="phoneSearch" type="text"
-						placeholder="Enter a telephone number">
+					<input class="form-control phoneSearch" id="phoneSearch" type="text" placeholder="Enter a telephone number">
 					<button class="centerV" id="clearInput" aria-hidden="true" onclick="clear()">
 						<img src="icon/close.png" style="height: 60%; opacity: 0.5;">
 					</button>
 				</div>
 			</div>
-			<div class="col-5" style="padding-left: 0; padding-right: 5">
+			<div class="col-5 px-0">
 				<div class="container groupButton centerV">
 					<a id="makeCall">
 						<img src="icon/Ui Buttons (9).png">
@@ -74,7 +71,7 @@
 			</div>
 		</div>
 
-		<div class="row" style="margin: 0">
+		<div class="row m-0">
 			<div class="col-2 leftnav">
 				<nav class="navbar" style="padding: 10px 12px">
 					<ul class="navbar-nav">
@@ -118,7 +115,7 @@
 				</nav>
 			</div>
 
-			<div class="col-10" style="padding: 0">
+			<div class="col-10 p-0">
 				<div class="container-fluid">
 					<div class="row">
 						<table class="table">
@@ -131,9 +128,9 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td class="loginTime" id="loginTime">00:00</td>
-									<td class="logonTime" id="logonTime">0:00:00</td>
-									<td class="talkTime" id="talkTime">0:00:00</td>
+									<td class="loginTime" id="loginTime"></td>
+									<td class="logonTime" id="logonTime"></td>
+									<td class="talkTime" id="talkTime"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -169,44 +166,42 @@
 									<div class="container-fluid borderCol" id="button_waitCall" style="background-color: #00bceb">
 										<div class="row centerV">
 											<div class="col-3">
-												<img class="centerH" src="icon/telemarketer-List.png" style="height: 100%">
+												<img src="icon/telemarketer-List.png" style="height: 100%">
 											</div>
 											<div class="col-3">
-												<p class="centerV waitCall" id="waitCall"
-													style="font-size: 16px; font-weight: bold">00</p>
+												<p class="centerV waitCall font-weight-bold" id="waitCall" style="font-size: 16px">00</p>
 											</div>
 											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV waitCall_time" id="waitCall_time">0:00:00</p>
+												<p class="centerV waitCall_time" id="waitCall_time"></p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-6" style="height: 40px; padding: 1px" >
+								<div class="col-6" style="height: 40px; padding: 1px">
 									<div class="container-fluid borderCol" id="button_dropCall" style="background-color: #e44141">
 										<div class="row centerV">
 											<div class="col-3">
-												<img class="centerH" src="icon/hot-line.png" style="height: 100%">
+												<img src="icon/hot-line.png" style="height: 100%">
 											</div>
 											<div class="col-3">
-												<p class="centerV dropCall" id="dropCall"
-													style="font-size: 16px; font-weight: bold">00</p>
+												<p class="centerV dropCall font-weight-bold" id="dropCall" style="font-size: 16px">00</p>
 											</div>
 											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV dropCall_time" id="dropCall_time">0:00:00</p>
+												<p class="centerV dropCall_time" id="dropCall_time"></p>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-4" style="height: 40px; padding: 1px" >
+								<div class="col-4" style="height: 40px; padding: 1px">
 									<div class="container-fluid borderCol" style="background-color: #49d761">
 										<div class="row centerV">
 											<div class="col-6">
-												<img class="centerH" src="icon/phone-call in.png" style="height: 100%">
+												<img src="icon/phone-call in.png" style="height: 100%">
 											</div>
 											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV inCall" id="inCall">000</p>
+												<p class="centerV inCall" id="inCall"></p>
 											</div>
 										</div>
 									</div>
@@ -215,22 +210,22 @@
 									<div class="container-fluid borderCol" style="background-color: #f0ce0e">
 										<div class="row centerV">
 											<div class="col-6">
-												<img class="centerH" src="icon/phone-call out.png" style="height: 100%">
+												<img src="icon/phone-call out.png" style="height: 100%">
 											</div>
 											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV outCall" id="outCall">000</p>
+												<p class="centerV outCall" id="outCall"></p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-4" style="height: 40px; padding: 1px" style="background-color: #e44141">
+								<div class="col-4" style="height: 40px; padding: 1px">
 									<div class="container-fluid borderCol" style="background-color: #e44141">
 										<div class="row centerV">
 											<div class="col-6">
-												<img class="centerH" src="icon/phone-call abandon.png" style="height: 100%">
+												<img src="icon/phone-call abandon.png" style="height: 100%">
 											</div>
 											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV missCall" id="missCall">000</p>
+												<p class="centerV missCall" id="missCall"></p>
 											</div>
 										</div>
 									</div>
@@ -241,31 +236,27 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-	<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</body>
-<!-- <script id="modal" data-template="listitem" type="text/template">
 
-  
-</script> -->
+
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal" type="button">&times;</button>
+					<h4 class="modal-title">Modal Header</h4>
+				</div>
+				<div class="modal-body">
+					<p>Some text in the modal.</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
 
 </html>

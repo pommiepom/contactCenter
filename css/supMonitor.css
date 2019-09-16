@@ -9,11 +9,6 @@ body {
 	transform: translateY(-50%);
 }
 
-.centerH {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 *:focus {
 	box-shadow: none !important;
 	outline: none !important;
