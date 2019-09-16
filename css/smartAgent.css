@@ -1,15 +1,15 @@
 body {
 	margin: 0px !important;
-	background-color: black
+	background-color:#ffffff
 }
 
-.divScreen {
+/* .divScreen {
 	width: 400px;
 	height: 550px;
 	margin: 0 !important;
 	padding: 0;
 	background-color: #ffffff;
-}
+} */
 
 .centerV {
 	position: relative;
@@ -59,7 +59,7 @@ select {
 	height: 20px;
 }
 
-#extNum {
+.extNum {
 	font-size: 30px;
 	font-weight: bold;
 }
@@ -74,15 +74,20 @@ select {
 }
 
 .groupButton {
+	height: 28px;
+	padding: 0;
+}
+
+.groupButton > .col {
 	padding: 0
 }
 
-.groupButton > a {
-	display: inline
-}
-
-.groupButton > a > img {
-	height: 50%
+.groupButton img {
+	height: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer
 }
 
 input[type="text"] {
@@ -123,7 +128,7 @@ input[type="text"] {
 
 .leftnav {
 	padding: 0;
-	height: 420px;
+	/* height: 420px; */
 	border-right: 1px solid #f4f4f3
 }
 
@@ -143,10 +148,10 @@ li.nav-item {
 }
 
 .nav-link > img {
-	max-width: 80%;
-	height:auto;
-	display:block;
-	margin:auto;
+	width: 33px;
+	height: auto;
+	display: block;
+	margin: auto;
 	margin-bottom: 2px
 }
 

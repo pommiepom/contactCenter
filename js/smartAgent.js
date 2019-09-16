@@ -91,7 +91,7 @@ $(function () {
 
 
 
-
+	$("#extNum").text("7500")
 	$("#runningText").text("Running Text")
 	$('.marquee').marquee({ duration: 7500 })
 })

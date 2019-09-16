@@ -14,219 +14,231 @@
 </head>
 
 <body>
-	<div class="divScreen">
-		<div class="row statusBar">
-			<div class="col-2 pr-0">
-				<img class="rounded-circle centerV" id="profile" style="max-width:100%">
-			</div>
-			<div class="col-5 pr-0" style="padding-left: 25">
-				<div class="container-fluid centerV p-0">
-					<p class="name m-0" id="name">Name Surname</p>
+	<div class="row statusBar">
+		<div class="col-2 col-lg-1 pr-0 h-100">
+			<img class="h-75 d-inline-block rounded-circle d-block mx-auto  centerV" id="profile">
+		</div>
+		<div class="col-5 col-lg-6 pr-0" style="padding-left: 25">
+			<div class="container-fluid centerV p-0">
+				<p class="name m-0" id="name">Name Surname</p>
 
-					<select id="state" name="state" style="font-size: 14px">
-						<option value="ready">Ready</option>
-						<option value="notReady">Not Ready</option>
-					</select>
+				<select id="state" name="state" style="font-size: 14px">
+					<option value="ready">Ready</option>
+					<option value="notReady">Not Ready</option>
+				</select>
 
-					<p class="callTime m-0" id="callTime" style="font-size: 12px">0:00:00</p>
-				</div>
-			</div>
-
-			<div class="col-3 pr-0">
-				<p class="centerV float-right extNum" id="extNum">7500</p>
-			</div>
-
-			<div class="col-2">
-				<img class="centerV" id="bt_setting" src="icon/settings-work-tool.png" style="width: 55%">
+				<p class="callTime m-0" id="callTime" style="font-size: 12px">0:00:00</p>
 			</div>
 		</div>
 
-		<div class="row functionBar">
-			<div class="col-7" style="padding-left: 15">
-				<div class="searchPhone centerV">
-					<input class="form-control phoneSearch" id="phoneSearch" type="text" placeholder="Enter a telephone number">
-					<button class="centerV" id="clearInput" aria-hidden="true" onclick="clear()">
-						<img src="icon/close.png" style="height: 60%; opacity: 0.5;">
-					</button>
-				</div>
+		<div class="col-5">
+			<div class="d-inline-flex h-100 float-right">
+				<p class="centerV extNum mb-auto mr-2" id="extNum"></p>
+				<img class="centerV h-25" id="bt_setting" src="icon/settings-work-tool.png">
 			</div>
-			<div class="col-5 px-0">
-				<div class="container groupButton centerV">
-					<a id="makeCall">
-						<img src="icon/Ui Buttons (9).png">
-					</a>
-					<a id="holdCall">
-						<img src="icon/call-pause.png">
-					</a>
-					<a id="transferCall">
-						<img src="icon/call-add.png">
-					</a>
-					<a id="consultCall">
-						<img src="icon/call-out.png">
-					</a>
-					<a id="conferenceCall">
-						<img src="icon/call-people.png">
-					</a>
+		</div>
+	</div>
+
+	<div class="row functionBar">
+		<div class="col-7 col-sm-8 col-md-8 col-lg-8" style="padding-left: 15">
+			<div class="searchPhone centerV">
+				<input class="form-control phoneSearch" id="phoneSearch" type="text" placeholder="Enter a telephone number">
+				<button class="centerV" id="clearInput" aria-hidden="true" onclick="clear()">
+					<img src="icon/close.png" style="height: 60%; opacity: 0.5;">
+				</button>
+			</div>
+		</div>
+		<div class="col-5 col-sm-4 offset-md-1 col-md-3 offset-lg-2 col-lg-2 pl-0">
+			<div class="row centerV m-0 groupButton">
+				<div class="col">
+					<img id="makeCall" src="icon/Ui Buttons (9).png">
+				</div>
+				<div class="col">
+					<img id="holdCall" src="icon/call-pause.png">
+				</div>
+				<div class="col">
+					<img id="transferCall" src="icon/call-add.png">
+				</div>
+				<div class="col">
+					<img id="consultCall" src="icon/call-out.png">
+				</div>
+				<div class="col">
+					<img id="conferenceCall" src="icon/call-people.png">
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="row m-0">
-			<div class="col-2 leftnav">
-				<nav class="navbar" style="padding: 10px 12px">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" id="bt_help" href="#">
-								<img src="icon/chat.png">
-								<p>Help</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="bt_dropCall" href="#">
-								<img src="icon/hot-line Drop.png">
-								<p>Drop Call</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="bt_history" href="#">
-								<img src="icon/phone-call History.png">
-								<p>History</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="bt_rds" href="#">
+	<div class="row m-0">
+		<div class="col-2 col-md-1 leftnav">
+			<nav class="navbar" style="padding: 10px 12px">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link" id="bt_help" href="#">
+							<img src="icon/chat.png">
+							<p>Help</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="bt_dropCall" href="#">
+							<img src="icon/hot-line Drop.png">
+							<p>Drop Call</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="bt_history" href="#">
+							<img src="icon/phone-call History.png">
+							<p>History</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="bt_rds" href="#">
+							<img src="icon/concrete-mixer.png">
+							<p>RDS</p>
+						</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" id="bt_voiceRecord" href="#">
 								<img src="icon/concrete-mixer.png">
-								<p>RDS</p>
+								<p>Voice Record</p>
 							</a>
 						</li>
-						<li class="nav-item">
-								<a class="nav-link" id="bt_voiceRecord" href="#">
-									<img src="icon/concrete-mixer.png">
-									<p>Voice Record</p>
-								</a>
-							</li>
-						<li class="nav-item">
-							<a class="nav-link" id="bt_monitor" href="#">
-								<img src="icon/call-center sup monitor.png">
-								<p>Monitor</p>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
+					<li class="nav-item">
+						<a class="nav-link" id="bt_monitor" href="#">
+							<img src="icon/call-center sup monitor.png">
+							<p>Monitor</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 
-			<div class="col-10 p-0">
-				<div class="container-fluid">
-					<div class="row">
-						<table class="table">
-							<thead class="thead-light">
-								<tr>
-									<th>Login Time</th>
-									<th>Logon Time</th>
-									<th>Talk Time</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="loginTime" id="loginTime"></td>
-									<td class="logonTime" id="logonTime"></td>
-									<td class="talkTime" id="talkTime"></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+		<div class="col-10 col-md-11 p-0">
+			<div class="container-fluid">
+				<div class="row">
+					<table class="table">
+						<thead class="thead-light">
+							<tr>
+								<th class="border-top-0 border-left-0">Login Time</th>
+								<th class="border-top-0">Logon Time</th>
+								<th class="border-top-0 border-right-0">Talk Time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="loginTime border-left-0" id="loginTime"></td>
+								<td class="logonTime" id="logonTime"></td>
+								<td class="talkTime border-right-0" id="talkTime"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 
-					<div class="row">
-						<div class="marquee" id="runningText"></div>
-					</div>
+				<div class="row">
+					<div class="marquee" id="runningText"></div>
+				</div>
 
-					<div class="row">
-						<table class="table">
-							<thead class="thead-light">
-								<tr>
-									<th>Login Time</th>
-									<th>Logon Time</th>
-									<th>Talk Time</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="loginTime" id="loginTime">00:00</td>
-									<td class="logonTime" id="logonTime">0:00:00</td>
-									<td class="talkTime" id="talkTime">0:00:00</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+				<div class="row mx-3 mt-5">
+					<table class="table">
+						<thead class="thead-light">
+							<tr>
+								<th>Login Time</th>
+								<th>Logon Time</th>
+								<th>Talk Time</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="loginTime" id="loginTime">00:00</td>
+								<td class="logonTime" id="logonTime">0:00:00</td>
+								<td class="talkTime" id="talkTime">0:00:00</td>
+							</tr>
+							<tr>
+								<td class="loginTime" id="loginTime">00:00</td>
+								<td class="logonTime" id="logonTime">0:00:00</td>
+								<td class="talkTime" id="talkTime">0:00:00</td>
+							</tr>
+							<tr>
+								<td class="loginTime" id="loginTime">00:00</td>
+								<td class="logonTime" id="logonTime">0:00:00</td>
+								<td class="talkTime" id="talkTime">0:00:00</td>
+							</tr>
+							<tr>
+								<td class="loginTime" id="loginTime">00:00</td>
+								<td class="logonTime" id="logonTime">0:00:00</td>
+								<td class="talkTime" id="talkTime">0:00:00</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 
-					<div class="row callStat">
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-6" style="height: 40px; padding: 1px">
-									<div class="container-fluid borderCol" id="button_waitCall" style="background-color: #00bceb">
-										<div class="row centerV">
-											<div class="col-3">
-												<img src="icon/telemarketer-List.png" style="height: 100%">
-											</div>
-											<div class="col-3">
-												<p class="centerV waitCall font-weight-bold" id="waitCall" style="font-size: 16px">00</p>
-											</div>
-											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV waitCall_time" id="waitCall_time"></p>
-											</div>
+				<div class="row callStat">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-6" style="height: 40px; padding: 1px">
+								<div class="container-fluid borderCol" id="button_waitCall" style="background-color: #00bceb">
+									<div class="row centerV">
+										<div class="col-3">
+											<img class="h-100" src="icon/telemarketer-List.png">
 										</div>
-									</div>
-								</div>
-								<div class="col-6" style="height: 40px; padding: 1px">
-									<div class="container-fluid borderCol" id="button_dropCall" style="background-color: #e44141">
-										<div class="row centerV">
-											<div class="col-3">
-												<img src="icon/hot-line.png" style="height: 100%">
-											</div>
-											<div class="col-3">
-												<p class="centerV dropCall font-weight-bold" id="dropCall" style="font-size: 16px">00</p>
-											</div>
-											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV dropCall_time" id="dropCall_time"></p>
-											</div>
+										<div class="col-3">
+											<p class="centerV waitCall font-weight-bold" id="waitCall" style="font-size: 16px">00</p>
+										</div>
+										<div class="col-6" style="padding-left: 5px">
+											<p class="centerV waitCall_time" id="waitCall_time"></p>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-4" style="height: 40px; padding: 1px">
-									<div class="container-fluid borderCol" style="background-color: #49d761">
-										<div class="row centerV">
-											<div class="col-6">
-												<img src="icon/phone-call in.png" style="height: 100%">
-											</div>
-											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV inCall" id="inCall"></p>
-											</div>
+							<div class="col-6" style="height: 40px; padding: 1px">
+								<div class="container-fluid borderCol" id="button_dropCall" style="background-color: #e44141">
+									<div class="row centerV">
+										<div class="col-3">
+											<img class="h-100" src="icon/hot-line.png">
+										</div>
+										<div class="col-3">
+											<p class="centerV dropCall font-weight-bold" id="dropCall" style="font-size: 16px">00</p>
+										</div>
+										<div class="col-6" style="padding-left: 5px">
+											<p class="centerV dropCall_time" id="dropCall_time"></p>
 										</div>
 									</div>
 								</div>
-								<div class="col-4" style="height: 40px; padding: 1px">
-									<div class="container-fluid borderCol" style="background-color: #f0ce0e">
-										<div class="row centerV">
-											<div class="col-6">
-												<img src="icon/phone-call out.png" style="height: 100%">
-											</div>
-											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV outCall" id="outCall"></p>
-											</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-4" style="height: 40px; padding: 1px">
+								<div class="container-fluid borderCol" style="background-color: #49d761">
+									<div class="row centerV">
+										<div class="col-6">
+											<img class="h-100" src="icon/phone-call in.png">
+										</div>
+										<div class="col-6" style="padding-left: 5px">
+											<p class="centerV inCall" id="inCall"></p>
 										</div>
 									</div>
 								</div>
-								<div class="col-4" style="height: 40px; padding: 1px">
-									<div class="container-fluid borderCol" style="background-color: #e44141">
-										<div class="row centerV">
-											<div class="col-6">
-												<img src="icon/phone-call abandon.png" style="height: 100%">
-											</div>
-											<div class="col-6" style="padding-left: 5px">
-												<p class="centerV missCall" id="missCall"></p>
-											</div>
+							</div>
+							<div class="col-4" style="height: 40px; padding: 1px">
+								<div class="container-fluid borderCol" style="background-color: #f0ce0e">
+									<div class="row centerV">
+										<div class="col-6">
+											<img class="h-100" src="icon/phone-call out.png">
+										</div>
+										<div class="col-6" style="padding-left: 5px">
+											<p class="centerV outCall" id="outCall"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-4" style="height: 40px; padding: 1px">
+								<div class="container-fluid borderCol" style="background-color: #e44141">
+									<div class="row centerV">
+										<div class="col-6">
+											<img class="h-100" src="icon/phone-call abandon.png">
+										</div>
+										<div class="col-6" style="padding-left: 5px">
+											<p class="centerV missCall" id="missCall"></p>
 										</div>
 									</div>
 								</div>
