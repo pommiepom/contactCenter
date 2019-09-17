@@ -3,7 +3,7 @@ $(function () {
 		profile: "images/profilePicture.png",
 		name: "Name Surname",
 		callTime: new Date(),
-		ext: "7500",
+		extNum: "7500",
 		loginTime: new Date(),
 		logonTime: new Date(),
 		talkTime: new Date(),
@@ -20,7 +20,7 @@ $(function () {
 	const profile = doc.profile
 	const name = doc.name
 	const callTime = (doc.callTime.getHours() + ":" + ("0" + doc.callTime.getMinutes()).slice(-2) + ":" + ("0" + doc.callTime.getSeconds()).slice(-2))
-	const ext = doc.ext
+	const extNum = doc.extNum
 	const loginTime = (doc.loginTime.getHours() + ":" + ("0" + doc.loginTime.getMinutes()).slice(-2) + ":" + ("0" + doc.loginTime.getSeconds()).slice(-2))
 	const logonTime = (doc.logonTime.getHours() + ":" + ("0" + doc.logonTime.getMinutes()).slice(-2) + ":" + ("0" + doc.logonTime.getSeconds()).slice(-2))
 	const talkTime = (doc.talkTime.getHours() + ":" + ("0" + doc.talkTime.getMinutes()).slice(-2) + ":" + ("0" + doc.talkTime.getSeconds()).slice(-2))
@@ -38,7 +38,7 @@ $(function () {
 	$("#profile").attr("src", profile)
 	$("#name").text(name)
 	$("#callTime").text(callTime)
-	$("#ext").text(ext)
+	$("#extNum").text(extNum)
 	$("#loginTime").text(loginTime)
 	$("#logonTime").text(logonTime)
 	$("#talkTime").text(talkTime)
@@ -51,6 +51,58 @@ $(function () {
 	$("#outCall").text(outCall)
 	$("#missCall").text(missCall)
 
+
+	// table waiting call
+	const docWaiting = [
+		{
+			phone: "0987654321",
+			state: "Available",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			state: "Hold",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			state: "Hold",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			state: "Hold",
+			time: new Date()
+		}
+	]
+
+	for (let i = 0; i < 4; i++) {
+		$('#b_waitingCall').append($("#waitingCall_tr").html());
+
+		$("#waiting_num").attr("id", "waiting_num-" + i);
+		$("#waiting_phone").attr("id", "waiting_phone-" + i);
+		$("#waiting_state").attr("id", "waiting_state-" + i);
+		$("#waiting_time").attr("id", "waiting_time-" + i);
+
+		if (docWaiting[i]) {
+			const waiting_num = i + 1 + "."
+			const waiting_phone = docWaiting[i].phone
+			const waiting_state = docWaiting[i].state
+			const waiting_time = docWaiting[i].time.getMinutes() + ":" + ("0" + docWaiting[i].time.getSeconds()).slice(-2)
+
+			$("#waiting_num-" + i).text(waiting_num)
+			$("#waiting_phone-" + i).text(waiting_phone)
+			$("#waiting_state-" + i).text(waiting_state)
+			$("#waiting_time-" + i).text(waiting_time)
+		}
+	}
+
+	if (docWaiting.length > 3) {
+		$( ".waitingCallTable td" ).css( "height", "calc(120px/4)" );
+	}
+	else {
+		$( ".waitingCallTable td" ).css( "height", `calc(120px/${docWaiting.length})` );
+	}
 
 
 
@@ -78,6 +130,14 @@ $(function () {
 		$('#phoneSearch').val('').focus()
 	})
 
+
+
+
+
+
+
+
+
 	$("#profile").css('cursor', 'pointer')
 	$("#button_waitCall").css('cursor', 'pointer')
 	$("#button_dropCall").css('cursor', 'pointer')
@@ -86,12 +146,7 @@ $(function () {
 	$("#bt_setting").click(() => {
 		$("#myModal").modal();
 	});
-
-
-
-
-
-	$("#extNum").text("7500")
+	
 	$("#runningText").text("Running Text")
 	$('.marquee').marquee({ duration: 7500 })
 })
