@@ -56,7 +56,7 @@ $(function () {
 	const docWaiting = [
 		{
 			phone: "0987654321",
-			state: "Available",
+			state: "Active",
 			time: new Date()
 		},
 		{
@@ -76,9 +76,10 @@ $(function () {
 		}
 	]
 
-	for (let i = 0; i < 4; i++) {
+	for (let i = 0; i < 3; i++) {
 		$('#b_waitingCall').append($("#waitingCall_tr").html());
 
+		$("#waitingTable_tr").attr("id", "waitingTable_tr-" + i);
 		$("#waiting_num").attr("id", "waiting_num-" + i);
 		$("#waiting_phone").attr("id", "waiting_phone-" + i);
 		$("#waiting_state").attr("id", "waiting_state-" + i);
@@ -97,12 +98,12 @@ $(function () {
 		}
 	}
 
-	if (docWaiting.length > 3) {
-		$( ".waitingCallTable td" ).css( "height", "calc(120px/4)" );
-	}
-	else {
-		$( ".waitingCallTable td" ).css( "height", `calc(120px/${docWaiting.length})` );
-	}
+	// if (docWaiting.length > 3) {
+	// 	$( ".waitingCallTable td" ).css( "height", "calc(120px/4)" );
+	// }
+	// else {
+	// 	$( ".waitingCallTable td" ).css( "height", `calc(120px/${docWaiting.length})` );
+	// }
 
 
 
@@ -125,28 +126,19 @@ $(function () {
 		setState();
 	})
 
-	//clear field
+	// clear field
 	$('#clearInput').on('click', () => {
 		$('#phoneSearch').val('').focus()
 	})
 
 
-
-
-
-
-
-
-
-	$("#profile").css('cursor', 'pointer')
-	$("#button_waitCall").css('cursor', 'pointer')
-	$("#button_dropCall").css('cursor', 'pointer')
-	$("#bt_setting").css('cursor', 'pointer')
-
+	// modal
 	$("#bt_setting").click(() => {
 		$("#myModal").modal();
 	});
 	
+
+	// running text
 	$("#runningText").text("Running Text")
 	$('.marquee').marquee({ duration: 7500 })
 })

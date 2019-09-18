@@ -191,8 +191,14 @@ th {
 
 .waitingCallTable tbody {
 	height: 120px;
-	/* display:block */
 }
+
+.waitingCallTable tr:hover {
+	background-color: #ffebb5;
+}
+
+
+
 
 
 .callStat {
@@ -220,4 +226,10 @@ th {
 	overflow: hidden;
 	font-size: 12px;
 	margin: 5px 0;
+}
+
+
+
+#profile, #button_waitCall, #button_dropCall, #bt_setting {
+	cursor: pointer
 }

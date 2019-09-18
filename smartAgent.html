@@ -44,7 +44,7 @@
 			<div class="col-7 col-sm-8 col-md-8 col-lg-8" style="padding-left: 15px">
 				<div class="searchPhone centerV">
 					<input class="form-control phoneSearch" id="phoneSearch" type="text" placeholder="Enter a telephone number">
-					<button class="centerV" id="clearInput" aria-hidden="true" onclick="clear()">
+					<button class="centerV" id="clearInput" aria-hidden="true">
 						<img src="icon/close.png" style="height: 60%; opacity: 0.5;">
 					</button>
 				</div>
@@ -255,11 +255,11 @@
 </body>
 
 <script id="waitingCall_tr" data-template="listitem" type="text/template">
-	<tr class="row m-0">
+	<tr id="waitingTable_tr" class="row m-0">
 		<td class="waitingNo col-2" id="waiting_num"></td>
 		<td class="waitingNum col-4 border-left-0" id="waiting_phone"></td>
-		<td class="waitingTime col-3 border-left-0" id="waiting_state"></td>
 		<td class="waitingState col-3 border-left-0" id="waiting_time"></td>
+		<td class="waitingTime col-3 border-left-0" id="waiting_state"></td>
 	</tr>
 </script>
 
