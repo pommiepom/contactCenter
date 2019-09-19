@@ -35,7 +35,203 @@ $(function () {
 
 
 
+	////////// waiting call table //////////
+	const docWaiting = [
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		}
+	]
+
+	for (let i = 0; i < 4; i++) {
+		$('#b_waitingCall').append($("#waitingCall_tr").html());
+
+		$("#waiting_num").attr("id", "waiting_num-" + i);
+		$("#waiting_phone").attr("id", "waiting_phone-" + i);
+		$("#waiting_name").attr("id", "waiting_name-" + i);
+		$("#waiting_time").attr("id", "waiting_time-" + i);
+
+		if (docWaiting[i]) {
+			const waiting_num = i + 1 + "."
+			const waiting_phone = docWaiting[i].phone
+			const waiting_name = docWaiting[i].name
+			const waiting_time = docWaiting[i].time.getHours() + ":" + ("0" + docWaiting[i].time.getMinutes()).slice(-2) +
+				":" + ("0" + docWaiting[i].time.getSeconds()).slice(-2)
+
+			$("#waiting_num-" + i).text(waiting_num)
+			$("#waiting_phone-" + i).text(waiting_phone)
+			$("#waiting_name-" + i).text(waiting_name)
+			$("#waiting_time-" + i).text(waiting_time)
+		} else {
+			$("#waiting_num-" + i).text(null)
+			$("#waiting_phone-" + i).text(null)
+			$("#waiting_name-" + i).text(null)
+			$("#waiting_time-" + i).text(null)
+		}
+	}
+
+
+
+	////////// agent queue table //////////
+	const docAgent = [
+		{
+			name: "Name Surname",
+			ext: "7501",
+			time: new Date()
+		},
+		{
+			name: "Name Surname",
+			ext: "7502",
+			time: new Date()
+		},
+		{
+			name: "Name Surname",
+			ext: "7503",
+			time: new Date()
+		},
+		{
+			name: "Name Surname",
+			ext: "7504",
+			time: new Date()
+		},
+		{
+			name: "Name Surname",
+			ext: "7505",
+			time: new Date()
+		},
+		{
+			name: "Name Surname",
+			ext: "7506",
+			time: new Date()
+		},
+		{
+			name: "Name Surname",
+			ext: "7507",
+			time: new Date()
+		},
+		{
+			name: "Name Surname",
+			ext: "7508",
+			time: new Date()
+		}
+	]
+
+	for (let i = 0; i < 3; i++) {
+		$('#b_agentQueue').append($("#agentQueue_tr").html());
+
+		$("#agent_num").attr("id", "agent_num-" + i);
+		$("#agent_name").attr("id", "agent_name-" + i);
+		$("#agent_ext").attr("id", "agent_ext-" + i);
+		$("#agent_time").attr("id", "agent_time-" + i);
+
+		if (docAgent[i]) {
+			const agent_num = i + 1 + "."
+			const agent_name = docAgent[i].name
+			const agent_ext = docAgent[i].ext
+			const agent_time = docAgent[i].time.getHours() + ":" + ("0" + docAgent[i].time.getMinutes()).slice(-2) +
+				":" + ("0" + docAgent[i].time.getSeconds()).slice(-2)
+
+			$("#agent_num-" + i).text(agent_num)
+			$("#agent_name-" + i).text(agent_name)
+			$("#agent_ext-" + i).text(agent_ext)
+			$("#agent_time-" + i).text(agent_time)
+		} 
+		else {
+			$("#agent_num-" + i).text(null)
+			$("#agent_name-" + i).text(null)
+			$("#agent_ext-" + i).text(null)
+			$("#agent_time-" + i).text(null)
+		}
+	}
+
+
+
+	////////// agent queue table //////////
+	const docCallback = [
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		},
+		{
+			phone: "0987654321",
+			name: "Name Surname",
+			time: new Date()
+		}
+	]
+
+	for (let i = 0; i < 6; i++) {
+		$('#b_callBack').append($("#callBack_tr").html());
+
+		$("#callback_num").attr("id", "callback_num-" + i);
+		$("#callback_phone").attr("id", "callback_phone-" + i);
+		$("#callback_name").attr("id", "callback_name-" + i);
+		$("#callback_time").attr("id", "callback_time-" + i);
+
+		const callback_num = i + 1 + "."
+		const callback_phone = docCallback[i].phone
+		const callback_name = docCallback[i].name
+		const callback_time = docCallback[i].time.getHours() + ":" + ("0" + docCallback[i].time.getMinutes()).slice(-2) +
+			":" + ("0" + docCallback[i].time.getSeconds()).slice(-2)
+
+		$("#callback_num-" + i).text(callback_num)
+		$("#callback_phone-" + i).text(callback_phone)
+		$("#callback_name-" + i).text(callback_name)
+		$("#callback_time-" + i).text(callback_time)
+	}
+
+
+	
+
 	////////// card //////////
+	$("#cardGroup").height($("#leftTable").height() - $("#silentBar").outerHeight(true))
+
 	const docCard = [
 		{
 			name: "Name Surname",
@@ -348,216 +544,16 @@ $(function () {
 
 	for (let i = 0; i < docCard.length; i++) {
 		addCard(docCard[i], i)
-	}
-
-
-
-
-	////////// waiting call table //////////
-	const docWaiting = [
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		}
-	]
-
-	for (let i = 0; i < 4; i++) {
-		$('#b_waitingCall').append($("#waitingCall_tr").html());
-
-		$("#waiting_num").attr("id", "waiting_num-" + i);
-		$("#waiting_phone").attr("id", "waiting_phone-" + i);
-		$("#waiting_name").attr("id", "waiting_name-" + i);
-		$("#waiting_time").attr("id", "waiting_time-" + i);
-
-		if (docWaiting[i]) {
-			const waiting_num = i + 1 + "."
-			const waiting_phone = docWaiting[i].phone
-			const waiting_name = docWaiting[i].name
-			const waiting_time = docWaiting[i].time.getHours() + ":" + ("0" + docWaiting[i].time.getMinutes()).slice(-2) +
-				":" + ("0" + docWaiting[i].time.getSeconds()).slice(-2)
-
-			$("#waiting_num-" + i).text(waiting_num)
-			$("#waiting_phone-" + i).text(waiting_phone)
-			$("#waiting_name-" + i).text(waiting_name)
-			$("#waiting_time-" + i).text(waiting_time)
-		} else {
-			$("#waiting_num-" + i).text(null)
-			$("#waiting_phone-" + i).text(null)
-			$("#waiting_name-" + i).text(null)
-			$("#waiting_time-" + i).text(null)
+		if (parseInt(i / 5) == parseInt((docCard.length - 1) /5)) {
+			$("#card-" + i).css( 'margin-bottom', '0')
 		}
 	}
-
-
-
-	////////// agent queue table //////////
-	const docAgent = [
-		{
-			name: "Name Surname",
-			ext: "7501",
-			time: new Date()
-		},
-		{
-			name: "Name Surname",
-			ext: "7502",
-			time: new Date()
-		},
-		{
-			name: "Name Surname",
-			ext: "7503",
-			time: new Date()
-		},
-		{
-			name: "Name Surname",
-			ext: "7504",
-			time: new Date()
-		},
-		{
-			name: "Name Surname",
-			ext: "7505",
-			time: new Date()
-		},
-		{
-			name: "Name Surname",
-			ext: "7506",
-			time: new Date()
-		},
-		{
-			name: "Name Surname",
-			ext: "7507",
-			time: new Date()
-		},
-		{
-			name: "Name Surname",
-			ext: "7508",
-			time: new Date()
-		}
-	]
-
-	for (let i = 0; i < 3; i++) {
-		$('#b_agentQueue').append($("#agentQueue_tr").html());
-
-		$("#agent_num").attr("id", "agent_num-" + i);
-		$("#agent_name").attr("id", "agent_name-" + i);
-		$("#agent_ext").attr("id", "agent_ext-" + i);
-		$("#agent_time").attr("id", "agent_time-" + i);
-
-		if (docAgent[i]) {
-			const agent_num = i + 1 + "."
-			const agent_name = docAgent[i].name
-			const agent_ext = docAgent[i].ext
-			const agent_time = docAgent[i].time.getHours() + ":" + ("0" + docAgent[i].time.getMinutes()).slice(-2) +
-				":" + ("0" + docAgent[i].time.getSeconds()).slice(-2)
-
-			$("#agent_num-" + i).text(agent_num)
-			$("#agent_name-" + i).text(agent_name)
-			$("#agent_ext-" + i).text(agent_ext)
-			$("#agent_time-" + i).text(agent_time)
-		} 
-		else {
-			$("#agent_num-" + i).text(null)
-			$("#agent_name-" + i).text(null)
-			$("#agent_ext-" + i).text(null)
-			$("#agent_time-" + i).text(null)
-		}
+	
+	if (docCard.length > 15) {
+		$("#cardGroup").css({"margin-right": "10px"})
 	}
-
-
-
-	////////// agent queue table //////////
-	const docCallback = [
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		},
-		{
-			phone: "0987654321",
-			name: "Name Surname",
-			time: new Date()
-		}
-	]
-
-	for (let i = 0; i < 6; i++) {
-		$('#b_callBack').append($("#callBack_tr").html());
-
-		$("#callback_num").attr("id", "callback_num-" + i);
-		$("#callback_phone").attr("id", "callback_phone-" + i);
-		$("#callback_name").attr("id", "callback_name-" + i);
-		$("#callback_time").attr("id", "callback_time-" + i);
-
-		const callback_num = i + 1 + "."
-		const callback_phone = docCallback[i].phone
-		const callback_name = docCallback[i].name
-		const callback_time = docCallback[i].time.getHours() + ":" + ("0" + docCallback[i].time.getMinutes()).slice(-2) +
-			":" + ("0" + docCallback[i].time.getSeconds()).slice(-2)
-
-		$("#callback_num-" + i).text(callback_num)
-		$("#callback_phone-" + i).text(callback_phone)
-		$("#callback_name-" + i).text(callback_name)
-		$("#callback_time-" + i).text(callback_time)
-	}
-
-
 
 
 	$("#silentNum").text('7500')
-//$("body").height() - (($("#headRow").outerHeight(true) + $("#silentBar").outerHeight(true))+30)
 
-	if ($('#silentBar').css('display') == "none") {
-		$("#cardGroup").height(525)
-	}
-	else {
-		$("#cardGroup").height(525 - $("#silentBar").outerHeight(true))
-	}
-	
-	if ($("#cardGroup").prop('scrollHeight') > $("#cardGroup").height()) {
-		$("#cardGroup").css({"padding-right": "0px"})
-	}
 })

@@ -98,7 +98,9 @@ select#team {
 }
 	
 .card {
-	border: 0
+	border: 0;
+	border-radius: 0;
+	margin: 0px 10px 10px 0px
 }
 
 .cardHead {
@@ -114,12 +116,6 @@ select#team {
 	font-size: 10px;
 	font-weight: bold;
 	display: inline;
-}
-
-.card {
-	border-radius: 0;
-	margin-right: 10px;
-	margin-bottom: 10px;
 }
 
 .card-body {
@@ -190,14 +186,14 @@ select#team {
 
 
 .tableName {
-	height: 28px;
+	height: 30px;
 	background-color: white;
 	font-size: 12px;
 	color: #6a6769;
 	border: 1px solid #e6e7e9;
 	padding: 7px !important;
 	border-bottom: none;
-	margin-bottom: 0
+	margin-bottom: 0;
 }
 
 .table {
@@ -218,7 +214,7 @@ thead {
 }
 
 th {
-	padding-bottom: 0 !important
+	padding: 7px 4px 0 4px !important
 }
 
 td {
@@ -241,5 +237,5 @@ td {
 	overflow: auto;
 	overflow-x: hidden;
 	padding: 0;
-	margin-right: 10px;
+	margin-right: 0px;
 }

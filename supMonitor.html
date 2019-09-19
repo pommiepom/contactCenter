@@ -138,14 +138,14 @@
 					</div>
 				</div>
 				
-				<div class="row" id="supBody" style=" height: 75%;">
-					<div class="col-3" style="padding: 0 10px; max-height: 100%;">
+				<div class="row" id="supBody"">
+					<div class="col-3" id="leftTable" style="padding: 0 10px;">
 						<p class="tableName">Waiting Call</p>
 						<table class="table table-striped mb-0 border-bottom-0" id="waitingCall">
 							<thead id="h_waitingCall">
 								<tr class="row m-0">
 									<th class="col-1">No.</th>
-									<th class="col-3">Phone Number</th>
+									<th class="col-3">Number</th>
 									<th class="col-5">Customer Name</th>
 									<th class="col-3">Waiting Time</th>
 								</tr>
@@ -158,8 +158,8 @@
 							<thead>
 								<tr class="row m-0" id="h_agentQueue">
 									<th class="col-1">No.</th>
-									<th class="col-6">Name</th>
-									<th class="col-2">Extension</th>
+									<th class="col-5">Name</th>
+									<th class="col-3">Extension</th>
 									<th class="col-3">State Time</th>
 								</tr>
 							</thead>
@@ -171,7 +171,7 @@
 							<thead>
 								<tr class="row m-0" id="h_callBack">
 									<th class="col-1">No.</th>
-									<th class="col-3">Phone Number</th>
+									<th class="col-3">Number</th>
 									<th class="col-5">Customer Name</th>
 									<th class="col-3">Time</th>
 								</tr>
@@ -283,8 +283,8 @@
 <script id="agentQueue_tr" data-template="listitem" type="text/template">
 	<tr class="row m-0">
 		<td class="agent_num col-1" id="agent_num"></td>
-		<td class="agent_name col-6" id="agent_name"></td>
-		<td class="agent_ext col-2" id="agent_ext"></td>
+		<td class="agent_name col-5" id="agent_name"></td>
+		<td class="agent_ext col-3" id="agent_ext"></td>
 		<td class="agent_time col-3" id="agent_time"></td>
 	</tr>
 </script>
